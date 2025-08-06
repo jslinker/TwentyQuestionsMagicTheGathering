@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTG Card Guesser</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0c0b0a; /* Dark background */
+            color: #d1d5db; /* Light gray text */
+        }
+        .magic-card-bg {
+            background-image: url('https://img.scryfall.com/art_crop/front/b/d/bd143715-46b5-4428-98e3-0c460a8b9487.jpg?1574762584'); /* Example MTG-themed background */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .card-container {
+            background-color: rgba(31, 41, 55, 0.95); /* Semi-transparent dark background */
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="magic-card-bg flex items-center justify-center min-h-screen p-4">
+
+    <div id="game-container" class="card-container rounded-3xl shadow-2xl p-8 max-w-lg w-full text-center">
+
+        <!-- Header -->
+        <h1 class="text-4xl font-bold mb-4 text-white">MTG Card Guesser</h1>
+        <p class="text-lg text-gray-300 mb-6">Think of any Magic: The Gathering card, and I'll try to guess it in as few questions as possible!</p>
+        <div id="loading" class="hidden text-xl text-gray-400">
+            <p>Loading decision tree data... this might take a moment.</p>
+            <p id="loading-message" class="mt-2"></p>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="start-screen">
+            <button id="start-button" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
+                Start Game
+            </button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="hidden">
+            <div id="question-area" class="mb-6">
+                <p id="question-text" class="text-2xl font-semibold mb-4"></p>
+                <div class="flex justify-center space-x-4">
+                    <button id="yes-button" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-full shadow-md transition-all duration-300 transform hover:scale-105">
+                        Yes
+                    </button>
+                    <button id="no-button" class="bg-rose-600 hover:bg-rose-700 text-white font-bold py-3 px-6 rounded-full shadow-md transition-all duration-300 transform hover:scale-105">
+                        No
+                    </button>
+                </div>
+            </div>
+            <p id="possibilities-text" class="text-gray-400 text-sm mt-4"></p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <button id="back-button" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full shadow-md transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
+                    Back
+                </button>
+                <button id="restart-button" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full shadow-md transition-all duration-300 transform hover:scale-105">
+                    Restart
+                </button>
+            </div>
+        </div>
+
+        <!-- Guessing Screen -->
+        <div id="guess-screen" class="hidden">
+            <div class="mb-6">
+                <p class="text-2xl font-semibold mb-4" id="guess-prompt"></p> <!-- New ID for dynamic prompt -->
+                <p id="guess-text" class="text-4xl font-extrabold text-indigo-400 hidden"></p> <!-- Hidden if multiple -->
+                <img id="card-image" class="mt-4 mx-auto rounded-lg shadow-xl" src="" alt="Guessed Card" onerror="this.onerror=null;this.src='https://placehold.co/488x680/1f2937/d1d5db?text=Image+Not+Available';">
+
+                <div id="possible-guesses-container" class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-60 overflow-y-auto p-2 rounded-lg bg-gray-700">
+                    <!-- Dynamically populated buttons for multiple guesses -->
+                </div>
+            </div>
+            <p class="text-lg mb-4" id="final-question-prompt"></p> <!-- New ID for dynamic final question -->
+            <div class="flex justify-center space-x-4">
+                <button id="correct-button" class="bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-6 rounded-full shadow-md transition-all duration-300 transform hover:scale-105">
+                    Correct!
+                </button>
+                <button id="incorrect-button" class="bg-rose-600 hover:bg-rose-700 text-white font-bold py-3 px-6 rounded-full shadow-md transition-all duration-300 transform hover:scale-105">
+                    Incorrect
+                </button>
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="hidden">
+            <div id="result-message" class="text-3xl font-bold mb-4"></div>
+            <p id="final-card-name-result" class="text-4xl font-extrabold text-indigo-400 hidden"></p>
+            <img id="final-card-image-result" class="mt-4 mx-auto rounded-lg shadow-xl hidden" src="" alt="Final Guessed Card" onerror="this.onerror=null;this.src='https://placehold.co/488x680/1f2937/d1d5db?text=Image+Not+Available';">
+            <button id="play-again-button" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
+                Play Again
+            </button>
+        </div>
+
+        <!-- Custom Alert/Error Modal -->
+        <div id="modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden items-center justify-center p-4">
+            <div class="bg-gray-800 p-6 rounded-xl shadow-2xl text-center max-w-sm w-full border border-gray-700">
+                <p id="modal-message" class="text-white text-xl font-semibold mb-4"></p>
+                <button id="modal-close-button" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full transition-all duration-300">
+                    OK
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- DOM Elements ---
+            const startScreen = document.getElementById('start-screen');
+            const gameScreen = document.getElementById('game-screen');
+            const guessScreen = document.getElementById('guess-screen');
+            const resultScreen = document.getElementById('result-screen');
+            const loadingScreen = document.getElementById('loading');
+            const loadingMessage = document.getElementById('loading-message');
+            const startButton = document.getElementById('start-button');
+            const questionText = document.getElementById('question-text');
+            const possibilitiesText = document.getElementById('possibilities-text');
+            const yesButton = document.getElementById('yes-button');
+            const noButton = document.getElementById('no-button');
+            const backButton = document.getElementById('back-button'); // New back button
+            const restartButton = document.getElementById('restart-button'); // New restart button
+            const guessPrompt = document.getElementById('guess-prompt'); // New: Dynamic prompt for guessing
+            const guessText = document.getElementById('guess-text');
+            const cardImage = document.getElementById('card-image');
+            const possibleGuessesContainer = document.getElementById('possible-guesses-container'); // New: Container for multiple guesses
+            const finalQuestionPrompt = document.getElementById('final-question-prompt'); // New: Dynamic final question
+            const correctButton = document.getElementById('correct-button');
+            const incorrectButton = document.getElementById('incorrect-button');
+            const playAgainButton = document.getElementById('play-again-button');
+            const resultMessage = document.getElementById('result-message');
+            const finalCardNameResult = document.getElementById('final-card-name-result'); // New: For displaying final card name on result screen
+            const finalCardImageResult = document.getElementById('final-card-image-result'); // New: For displaying final card image on result screen
+            const modal = document.getElementById('modal');
+            const modalMessage = document.getElementById('modal-message');
+            const modalCloseButton = document.getElementById('modal-close-button');
+
+            // --- Game State Variables ---
+            let decisionTree = null; // Stores the loaded decision tree
+            let cardMap = {}; // Stores all card data for quick lookup by name
+            let currentNode = null;  // Current node in the decision tree
+            let history = [];        // Stack to track visited nodes for 'Back' functionality
+            
+            // --- Utility Functions ---
+            const showModal = (message) => {
+                modalMessage.textContent = message;
+                modal.style.display = 'flex';
+            };
+
+            const hideModal = () => {
+                modal.style.display = 'none';
+            };
+            modalCloseButton.addEventListener('click', hideModal);
+
+            const showScreen = (screen) => {
+                startScreen.classList.add('hidden');
+                gameScreen.classList.add('hidden');
+                guessScreen.classList.add('hidden');
+                resultScreen.classList.add('hidden');
+                loadingScreen.classList.add('hidden');
+                screen.classList.remove('hidden');
+            };
+
+            // --- Game Logic Functions ---
+            const fetchDecisionTree = async () => {
+                showScreen(loadingScreen);
+                loadingMessage.textContent = "Loading game data...";
+
+                try {
+                    // Fetch decision tree
+                    const treeResponse = await fetch('decision-tree.json');
+                    if (!treeResponse.ok) {
+                        throw new Error("Error loading decision tree. Please ensure 'decision-tree.json' exists and is valid.");
+                    }
+                    decisionTree = await treeResponse.json();
+
+                    if (!decisionTree || Object.keys(decisionTree).length === 0) {
+                        showModal("Error: Decision tree data is empty or invalid. Please check 'decision-tree.json'.");
+                        showScreen(startScreen);
+                        return;
+                    }
+
+                    // Fetch all card data for image lookups
+                    const cardDataResponse = await fetch('card-data.json');
+                    if (!cardDataResponse.ok) {
+                        throw new Error("Error loading card data for images. Please ensure 'card-data.json' exists and is valid.");
+                    }
+                    const allCards = await cardDataResponse.json();
+                    
+                    // Populate cardMap for quick lookups
+                    allCards.forEach(card => {
+                        cardMap[card.name] = card;
+                    });
+                    
+                    console.log("Successfully loaded decision tree and card data.");
+                    showScreen(startScreen);
+                } catch (error) {
+                    console.error('Failed to fetch game data:', error);
+                    showModal(`Error loading game data: ${error.message}`);
+                    showScreen(startScreen);
+                }
+            };
+
+            const startGame = () => {
+                currentNode = decisionTree; // Start at the root of the tree
+                history = []; // Clear history for a new game
+                backButton.disabled = true; // Disable back button at start
+                showScreen(gameScreen);
+                askQuestion();
+            };
+
+            const askQuestion = () => {
+                if (!currentNode) {
+                    showModal("Game error: No current node in the decision tree. Restarting.");
+                    startGame();
+                    return;
+                }
+
+                // If it's a leaf node (either a final card or remaining possibilities)
+                if (currentNode.card_name || (currentNode.remainingPossibleCardNames && currentNode.remainingPossibleCardNames.length > 0)) {
+                    makeGuess();
+                    return;
+                }
+
+                // It's a decision node, display the question
+                questionText.textContent = currentNode.question;
+                // Clear possibilitiesText as the data is no longer directly available in the tree node
+                possibilitiesText.textContent = ''; 
+                backButton.disabled = history.length === 0;
+            };
+
+            const handleAnswer = (isYes) => {
+                if (!currentNode) {
+                    showModal("Game error: No current question. Restarting game.");
+                    startGame();
+                    return;
+                }
+
+                history.push(currentNode); // Save current node to history before moving
+                backButton.disabled = false; // Enable back button
+
+                if (isYes) {
+                    currentNode = currentNode.yes;
+                } else {
+                    currentNode = currentNode.no;
+                }
+                
+                askQuestion(); // Ask the next question based on the new current node
+            };
+
+            const handleSpecificCardChosen = (chosenCardName) => {
+                showScreen(resultScreen); // Go to result screen
+                resultMessage.textContent = "I knew it! I guessed your card!";
+                finalCardNameResult.textContent = chosenCardName;
+                finalCardNameResult.classList.remove('hidden');
+
+                const cardDataForImage = cardMap[chosenCardName];
+                if (cardDataForImage) {
+                    const imageUrl = cardDataForImage.image_uris?.normal || (cardDataForImage.card_faces && cardDataForImage.card_faces[0]?.image_uris?.normal) || '';
+                    finalCardImageResult.src = imageUrl;
+                    finalCardImageResult.classList.remove('hidden');
+                } else {
+                    finalCardImageResult.src = 'https://placehold.co/488x680/1f2937/d1d5db?text=Image+Not+Available';
+                    finalCardImageResult.classList.remove('hidden');
+                }
+            };
+
+            const makeGuess = () => {
+                // Clear previous state
+                possibleGuessesContainer.innerHTML = '';
+                guessText.classList.add('hidden'); // Hide single guess text by default
+                cardImage.src = ''; // Clear previous image
+                cardImage.classList.remove('hidden'); // Ensure image is visible for single guess
+                correctButton.classList.remove('hidden'); // Show buttons for both cases
+                incorrectButton.classList.remove('hidden');
+
+                if (currentNode.card_name) {
+                    // Single card leaf node
+                    guessPrompt.textContent = "Is your card...";
+                    guessText.textContent = currentNode.card_name;
+                    guessText.classList.remove('hidden'); // Show single guess text
+                    finalQuestionPrompt.textContent = "Did I guess it right?";
+
+                    const cardDataForImage = cardMap[currentNode.card_name];
+                    if (cardDataForImage) {
+                        const imageUrl = cardDataForImage.image_uris?.normal || (cardDataForImage.card_faces && cardDataForImage.card_faces[0]?.image_uris?.normal) || '';
+                        cardImage.src = imageUrl;
+                    } else {
+                        cardImage.src = 'https://placehold.co/488x680/1f2937/d1d5db?text=Image+Not+Available';
+                    }
+
+                } else if (currentNode.remainingPossibleCardNames && currentNode.remainingPossibleCardNames.length > 0) {
+                    // Multiple cards remaining leaf node
+                    guessPrompt.textContent = "Is your card one of these?";
+                    finalQuestionPrompt.textContent = "If your card is listed, click it. Otherwise, click 'Incorrect'.";
+                    
+                    // Show a generic placeholder image for multiple choices
+                    cardImage.src = 'https://placehold.co/488x680/1f2937/d1d5db?text=Possible+Cards'; 
+
+                    currentNode.remainingPossibleCardNames.forEach(cardName => {
+                        const button = document.createElement('button');
+                        button.textContent = cardName;
+                        button.className = 'bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105';
+                        button.addEventListener('click', () => {
+                            handleSpecificCardChosen(cardName);
+                        });
+                        possibleGuessesContainer.appendChild(button);
+                    });
+                    // Hide the main guess text as we're showing multiple buttons
+                    guessText.classList.add('hidden');
+
+                } else {
+                    // Should ideally not happen if tree is built correctly, but for robustness
+                    showScreen(resultScreen);
+                    resultMessage.textContent = "I give up! I couldn't find any cards matching your answers.";
+                    // Hide specific card display elements on result screen if no card was found
+                    finalCardNameResult.classList.add('hidden');
+                    finalCardImageResult.classList.add('hidden');
+                    return;
+                }
+
+                showScreen(guessScreen);
+            };
+
+            const handleResult = (isCorrect) => {
+                showScreen(resultScreen);
+                if (isCorrect) {
+                    resultMessage.textContent = "I knew it! I guessed your card!";
+                    // If 'Correct!' was clicked for a single card guess, the image is already set.
+                    // If 'Correct!' was clicked for a list, it means the card was in the list,
+                    // but we don't know which one, so we don't show a specific image here.
+                    finalCardNameResult.classList.add('hidden');
+                    finalCardImageResult.classList.add('hidden'); // Hide specific image if it was a list confirmation
+                } else {
+                    resultMessage.textContent = "Darn! You got me. Thanks for playing!";
+                    finalCardNameResult.classList.add('hidden');
+                    finalCardImageResult.classList.add('hidden');
+                }
+            };
+
+            const goBack = () => {
+                if (history.length > 0) {
+                    currentNode = history.pop();
+                    askQuestion(); // Re-render the previous question
+                }
+                backButton.disabled = history.length === 0; // Disable if no history left
+            };
+
+            const restartGame = () => {
+                startGame(); // Simply restart the game from the beginning
+            };
+            
+            // --- Event Listeners ---
+            startButton.addEventListener('click', startGame);
+            yesButton.addEventListener('click', () => handleAnswer(true));
+            noButton.addEventListener('click', () => handleAnswer(false));
+            correctButton.addEventListener('click', () => handleResult(true)); // This is for "Yes, you got it" when a single card is shown or "Yes, it was one of those" when a list is shown.
+            incorrectButton.addEventListener('click', () => handleResult(false)); // This is for "No, you didn't get it"
+            playAgainButton.addEventListener('click', restartGame); // Use restartGame for play again
+            backButton.addEventListener('click', goBack); // New back button listener
+            restartButton.addEventListener('click', restartGame); // New restart button listener
+
+            // Initial data fetch on page load
+            fetchDecisionTree();
+        });
+    </script>
+
+</body>
+</html>
