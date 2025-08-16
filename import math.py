@@ -57,13 +57,6 @@ def has_colorless_color(card):
         return not card.get("colors", []) and "Land" not in card.get("type_line", "")
     except KeyError:
         return False
-        
-def is_legendary(card):
-    # Checks if "Legendary" is in the type_line (e.g., "Legendary Creature")
-    try:
-        return "Legendary" in card.get("type_line", "")
-    except KeyError:
-        return False
 
 # --- Dynamically generated question functions for CMC, Power, and Toughness ---
 
@@ -77,17 +70,33 @@ for i in range(14): # CMC from 0 to 13
             except KeyError:
                 return False
         return check_cmc
+    def make_cmc_lesser_question(cmc_val):
+        def check_cmc(card):
+            try:
+                return card.get("cmc") < cmc_val
+            except KeyError:
+                return False
+        return check_cmc
+    def make_cmc_greater_question(cmc_val):
+        def check_cmc(card):
+            try:
+                return card.get("cmc") > cmc_val
+            except KeyError:
+                return False
+        return check_cmc
     _generated_cmc_questions.append((make_cmc_exact_question(i), f"Does the card have a converted mana value (CMC) of {i}?"))
+    _generated_cmc_questions.append((make_cmc_lesser_question(i), f"Does the card have a converted mana value (CMC) less than {i}?"))
+    _generated_cmc_questions.append((make_cmc_greater_question(i), f"Does the card have a converted mana value (CMC) greater than {i}?"))
 
-_generated_cmc_questions.extend([
-    (lambda card: card.get("cmc", -1) < 3, "Does the card have a converted mana value (CMC) less than 3?"),
-    (lambda card: card.get("cmc", -1) < 5, "Does the card have a converted mana value (CMC) less than 5?"),
-    (lambda card: card.get("cmc", -1) < 7, "Does the card have a converted mana value (CMC) less than 7?"),
-    (lambda card: card.get("cmc", -1) >= 3, "Does the card have a converted mana value (CMC) of 3 or more?"),
-    (lambda card: card.get("cmc", -1) >= 5, "Does the card have a converted mana value (CMC) of 5 or more?"),
-    (lambda card: card.get("cmc", -1) >= 7, "Does the card have a converted mana value (CMC) of 7 or more?"),
-    (lambda card: card.get("cmc", -1) >= 10, "Does the card have a converted mana value (CMC) of 10 or more?"),
-])
+# _generated_cmc_questions.extend([
+#     (lambda card: card.get("cmc", -1) < 3, "Does the card have a converted mana value (CMC) less than 3?"),
+#     (lambda card: card.get("cmc", -1) < 5, "Does the card have a converted mana value (CMC) less than 5?"),
+#     (lambda card: card.get("cmc", -1) < 7, "Does the card have a converted mana value (CMC) less than 7?"),
+#     (lambda card: card.get("cmc", -1) >= 3, "Does the card have a converted mana value (CMC) of 3 or more?"),
+#     (lambda card: card.get("cmc", -1) >= 5, "Does the card have a converted mana value (CMC) of 5 or more?"),
+#     (lambda card: card.get("cmc", -1) >= 7, "Does the card have a converted mana value (CMC) of 7 or more?"),
+#     (lambda card: card.get("cmc", -1) >= 10, "Does the card have a converted mana value (CMC) of 10 or more?"),
+# ])
 
 # Helper for power/toughness checks to avoid repetition
 def _is_creature_with_numeric_pt(card, pt_field):
@@ -143,6 +152,7 @@ _generated_type_questions = []
 # This will be populated after loading card_data to find all unique keywords.
 _generated_keyword_questions = []
 
+_generated_rarity_questions = []
 
 # A list of tuples, where each tuple contains a function and a human-readable question string.
 # This makes it easy for the tree to store and display the questions.
@@ -318,29 +328,49 @@ if __name__ == "__main__":
     except json.JSONDecodeError:
         print("Error: 'card-data.json' contains invalid JSON.")
         exit(1)
-    
-    print("Skipping oracle_id uniqueness validation as requested. Proceeding with tree building. ✅")
+
+    # filter out memorabelia and art cards
+    def check_art_card(card):
+        return "Card" in card.get("type_line", "")
+    card_data = [card for card in card_data if not check_art_card(card)]
 
     # --- Dynamically generate type questions based on loaded data ---
     all_unique_types = set()
+    all_unique_rarities = set()
     for card in card_data:
         type_line = card.get("type_line", "")
         # Split by ' — ' (em dash) to treat subtypes/supertypes uniformly
         # and then split by spaces to get all individual type components
         for type_word in type_line.replace(' — ', ' ').split():
-            if type_word: # Ensure it's not an empty string
+            if type_word and type_word != "//": # Ensure it's not an empty string
                 all_unique_types.add(type_word)
+        
+        card_rarity = card.get("rarity", "")
+        if card_rarity != "":
+            all_unique_rarities.add(card_rarity)
     
     _generated_type_questions = []
     for card_type in sorted(list(all_unique_types)):
         def make_type_question(c_type):
             def check_type(card):
                 try:
-                    return c_type in card.get("type_line", "")
+                    for type_word in card.get("type_line", "").replace(' — ', ' ').split():
+                        if type_word and type_word == c_type: # Ensure it's not an empty string and is an exact match
+                            return True
                 except KeyError:
                     return False
             return check_type
         _generated_type_questions.append((make_type_question(card_type), f"Is the card a {card_type}?"))
+
+    _generated_rarity_questions = []
+    for card_rarity in sorted(list(all_unique_rarities)):
+        def check_rarity(card):
+            return card.get("rarity", "") == card_rarity
+        _generated_rarity_questions.append((check_rarity, f"Is the card rarity {card_rarity}?"))
+
+    def check_double_sided(card):
+        return "//" in card.get("type_line", "")
+    _generated_type_questions.append((check_double_sided, f"Is the card a double sided or split card?"))
 
     # --- Dynamically generate keyword questions based on loaded data ---
     all_unique_keywords = set()
@@ -370,13 +400,13 @@ if __name__ == "__main__":
         (has_black_color, "Does the card have Black in its color identity?"),
         (has_white_color, "Does the card have White in its color identity?"),
         (has_colorless_color, "Is the card Colorless?"),
-        (is_legendary, "Is the card Legendary?"),
     ])
     available_questions.extend(_generated_cmc_questions)
     available_questions.extend(_generated_power_questions)
     available_questions.extend(_generated_toughness_questions)
     available_questions.extend(_generated_type_questions) # Add dynamic type questions
     available_questions.extend(_generated_keyword_questions) # Add dynamic keyword questions
+    available_questions.extend(_generated_rarity_questions) # Add dynamic rarity questions
 
     # Build the tree from the full (or filtered, if uncommented) data
     decision_tree = build_tree(card_data, available_questions)
