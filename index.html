@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A yes-or-no game that tries to guess your Magic: The Gathering card.">
+    <meta name="theme-color" content="#0c0b0a">
     <title>MTG Card Guesser</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -31,7 +33,7 @@
 
         <!-- Header -->
         <h1 class="text-4xl font-bold mb-4 text-white">MTG Card Guesser</h1>
-        <p class="text-lg text-gray-300 mb-6">Think of any Magic: The Gathering card, and I'll try to guess it in as few questions as possible!</p>
+        <p class="text-lg text-gray-300 mb-6">Think of a Magic: The Gathering card that belongs in a normal deck, and I'll try to guess it! Tokens and auxiliary game pieces such as Planes, Schemes, and Vanguard cards aren't included.</p>
         <div id="loading" class="hidden text-xl text-gray-400">
             <p>Loading decision tree data... this might take a moment.</p>
             <p id="loading-message" class="mt-2"></p>
@@ -46,6 +48,10 @@
 
         <!-- Game Screen -->
         <div id="game-screen" class="hidden">
+            <div id="name-phase-notice" class="hidden mb-5 rounded-xl border border-amber-500/60 bg-amber-950/80 p-4 text-left">
+                <p class="font-bold text-amber-300">Name tiebreaker</p>
+                <p id="name-phase-message" class="mt-1 text-sm text-amber-100"></p>
+            </div>
             <div id="question-area" class="mb-6">
                 <p id="question-text" class="text-2xl font-semibold mb-4"></p>
                 <div class="flex justify-center space-x-4">
@@ -123,6 +129,8 @@
             const loadingMessage = document.getElementById('loading-message');
             const startButton = document.getElementById('start-button');
             const questionText = document.getElementById('question-text');
+            const namePhaseNotice = document.getElementById('name-phase-notice');
+            const namePhaseMessage = document.getElementById('name-phase-message');
             const possibilitiesText = document.getElementById('possibilities-text');
             const yesButton = document.getElementById('yes-button');
             const noButton = document.getElementById('no-button');
@@ -195,9 +203,36 @@
                     }
                     const allCards = await cardDataResponse.json();
                     
-                    // Populate cardMap for quick lookups
+                    // Match the generator's normal-deck-card scope. This also
+                    // prevents an excluded token with the same name as a deck
+                    // card from replacing the deck card's result image.
+                    const excludedLayouts = new Set([
+                        'art_series', 'double_faced_token', 'emblem', 'planar',
+                        'scheme', 'token', 'vanguard'
+                    ]);
+                    const excludedTypeWords = new Set([
+                        'card', 'conspiracy', 'dungeon', 'emblem', 'hero',
+                        'phenomenon', 'plane', 'scheme', 'stickers', 'token',
+                        'vanguard'
+                    ]);
+                    const excludedSubtypes = new Set(['attraction', 'contraption']);
+                    const isNormalDeckCard = (card) => {
+                        if (excludedLayouts.has(card.layout)) return false;
+                        const typeLines = [card.type_line || '', ...(card.card_faces || []).map(face => face.type_line || '')];
+                        return !typeLines.some(typeLine => typeLine.split(' // ').some(faceLine => {
+                            const [left = '', right = ''] = faceLine.split(' — ');
+                            const leftWords = left.toLowerCase().split(/\s+/);
+                            const subtypeWords = right.toLowerCase().split(/\s+/);
+                            return leftWords.some(word => excludedTypeWords.has(word)) ||
+                                subtypeWords.some(word => excludedSubtypes.has(word));
+                        }));
+                    };
+
+                    // Populate cardMap for quick lookups.
                     allCards.forEach(card => {
-                        cardMap[card.name] = card;
+                        if (isNormalDeckCard(card)) {
+                            cardMap[card.name] = card;
+                        }
                     });
                     
                     console.log("Successfully loaded decision tree and card data.");
@@ -232,6 +267,12 @@
 
                 // It's a decision node, display the question
                 questionText.textContent = currentNode.question;
+                if (currentNode.phase === 'name') {
+                    namePhaseMessage.textContent = `The card-property questions narrowed this to ${currentNode.fallback_group_size} possible names. I’ll use simple questions about the printed card name to finish.`;
+                    namePhaseNotice.classList.remove('hidden');
+                } else {
+                    namePhaseNotice.classList.add('hidden');
+                }
                 // Clear possibilitiesText as the data is no longer directly available in the tree node
                 possibilitiesText.textContent = ''; 
                 backButton.disabled = history.length === 0;

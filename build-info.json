@@ -1,0 +1,375 @@
+{
+  "built_at": "2026-08-19T16:38:06.930390Z",
+  "tag_snapshot": "oracle-tags-snapshot-20260818-230352Z.json",
+  "inputs": {
+    "card_data_sha256": "f3e10212b5d82ea4ee8975fefb928ec6387146a3af64662f65c1711fe64926ba",
+    "oracle_tags_sha256": "fbf7163928cc7da326086053a738ca602b2a266fc9a649a1f2c4ebd7e8a4f33c",
+    "semantic_questions_sha256": "127ccfb3003a21d840ebe5d0cade2c64afee2bce0dc26096beafbaa866c10ae4",
+    "generator_sha256": "7e83f52d5d297faf47dfeee5b9e8102583433b862583280660d217e6c3733a69"
+  },
+  "tree_metrics": {
+    "represented_records": 34389,
+    "decision_nodes": 34377,
+    "leaf_count": 34378,
+    "single_card_leaves": 34378,
+    "ambiguous_records": 0,
+    "largest_leaf": 1,
+    "minimum_depth": 10,
+    "maximum_depth": 47,
+    "average_depth": 16.0286,
+    "median_depth": 15,
+    "p90_depth": 18,
+    "leaf_sizes": {
+      "1": 34378
+    },
+    "card_data": "card-data.json",
+    "included_records": 34389,
+    "excluded_records": 4237,
+    "available_questions": 1613,
+    "questions_used": 789,
+    "semantic_provenance": {
+      "snapshot": "oracle-tags-snapshot-20260818-230352Z.json",
+      "snapshot_metadata": {
+        "source": "https://api.scryfall.com/private/tags/oracle",
+        "fetched_at": "2026-08-18T23:04:00.206798Z",
+        "response_sha256": "f9100ff5148d7fcf31084efdfec7bd9adebb094b3d047e2a9a389865598f96ea",
+        "tag_count": 5335,
+        "unique_label_count": 5334,
+        "duplicate_label_row_count": 1,
+        "duplicated_labels": [
+          "phoenix-with-sets-mechanic"
+        ],
+        "assignment_count": 554344,
+        "unique_oracle_id_count": 35969
+      },
+      "config": "semantic-questions.json",
+      "config_version": 5,
+      "semantic_question_count": 57
+    },
+    "semantic_questions": [
+      {
+        "question": "Can it remove a permanent from the battlefield?",
+        "matching_included_records": 6555,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it remove a single permanent?",
+        "matching_included_records": 5007,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it remove a creature?",
+        "matching_included_records": 5602,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it cause you to draw one or more cards?",
+        "matching_included_records": 4371,
+        "used_in_tree": true
+      },
+      {
+        "question": "Does it draw a card as it resolves or enters?",
+        "matching_included_records": 680,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it deal noncombat damage?",
+        "matching_included_records": 3106,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it let you reuse a card from a graveyard?",
+        "matching_included_records": 2289,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it increase the mana available to you on this or a later turn?",
+        "matching_included_records": 2353,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it put additional lands onto the battlefield?",
+        "matching_included_records": 637,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it cause you to gain life?",
+        "matching_included_records": 2684,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it let you sacrifice another permanent you control?",
+        "matching_included_records": 1481,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it sacrifice itself as a cost or effect?",
+        "matching_included_records": 1403,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it search a library for a card?",
+        "matching_included_records": 1186,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it remove multiple permanents at once?",
+        "matching_included_records": 954,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it make an opponent discard a card?",
+        "matching_included_records": 583,
+        "used_in_tree": true
+      },
+      {
+        "question": "Does it let you discard your own cards?",
+        "matching_included_records": 1359,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it counter a spell or ability?",
+        "matching_included_records": 555,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it mill cards from a library?",
+        "matching_included_records": 1270,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it remove or shut down cards in a graveyard?",
+        "matching_included_records": 430,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it exile a permanent and then return it to the battlefield?",
+        "matching_included_records": 200,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it repeatedly create tokens?",
+        "matching_included_records": 1888,
+        "used_in_tree": true
+      },
+      {
+        "question": "Is it a noncreature artifact that produces additional mana?",
+        "matching_included_records": 392,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it return a permanent from the battlefield to its owner’s hand?",
+        "matching_included_records": 926,
+        "used_in_tree": true
+      },
+      {
+        "question": "Is it a land that can produce mana of any color?",
+        "matching_included_records": 117,
+        "used_in_tree": true
+      },
+      {
+        "question": "Is it a land that can sacrifice itself to search for another land?",
+        "matching_included_records": 54,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it target more than one object or player?",
+        "matching_included_records": 1505,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it prevent damage?",
+        "matching_included_records": 601,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it untap a permanent?",
+        "matching_included_records": 764,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it increase the power of multiple creatures?",
+        "matching_included_records": 1265,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it destroy a permanent?",
+        "matching_included_records": 1763,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it change who controls a permanent?",
+        "matching_included_records": 829,
+        "used_in_tree": true
+      },
+      {
+        "question": "Does it care about counters on a card, permanent, or player?",
+        "matching_included_records": 1304,
+        "used_in_tree": true
+      },
+      {
+        "question": "Does it care about a creature type?",
+        "matching_included_records": 2914,
+        "used_in_tree": true
+      },
+      {
+        "question": "Is it an instant or sorcery that targets exactly one object or player?",
+        "matching_included_records": 4675,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it change a permanent’s card type or subtype?",
+        "matching_included_records": 1309,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it protect a permanent you control?",
+        "matching_included_records": 1319,
+        "used_in_tree": true
+      },
+      {
+        "question": "Does it involve paying life?",
+        "matching_included_records": 813,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it tap a permanent?",
+        "matching_included_records": 729,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it remove a planeswalker?",
+        "matching_included_records": 1995,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it put +1/+1 counters on one or more permanents?",
+        "matching_included_records": 1676,
+        "used_in_tree": true
+      },
+      {
+        "question": "Does its rules text care about a creature’s power?",
+        "matching_included_records": 1545,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it deal noncombat damage to a player?",
+        "matching_included_records": 1877,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it convert one type or color of mana into another?",
+        "matching_included_records": 219,
+        "used_in_tree": true
+      },
+      {
+        "question": "Does its rules text refer to mana value?",
+        "matching_included_records": 1001,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it grant trample?",
+        "matching_included_records": 524,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it grant flying?",
+        "matching_included_records": 476,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it grant first strike?",
+        "matching_included_records": 281,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it grant haste?",
+        "matching_included_records": 684,
+        "used_in_tree": true
+      },
+      {
+        "question": "Does it have an ability that triggers when a creature dies?",
+        "matching_included_records": 1628,
+        "used_in_tree": true
+      },
+      {
+        "question": "Does it have an ability that triggers when a creature attacks?",
+        "matching_included_records": 2234,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it remove an enchantment?",
+        "matching_included_records": 1061,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it remove an artifact?",
+        "matching_included_records": 1216,
+        "used_in_tree": true
+      },
+      {
+        "question": "Is it a land that enters tapped?",
+        "matching_included_records": 507,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it copy a spell, ability, or permanent?",
+        "matching_included_records": 1058,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it reduce the cost of a spell?",
+        "matching_included_records": 366,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it let you look at an opponent’s hand?",
+        "matching_included_records": 236,
+        "used_in_tree": true
+      },
+      {
+        "question": "Can it exile a permanent from the battlefield?",
+        "matching_included_records": 596,
+        "used_in_tree": true
+      }
+    ],
+    "semantic_phase": {
+      "represented_records": 34389,
+      "decision_nodes": 31741,
+      "leaf_count": 31742,
+      "single_card_leaves": 30359,
+      "ambiguous_records": 4030,
+      "largest_leaf": 31,
+      "minimum_depth": 10,
+      "maximum_depth": 43,
+      "average_depth": 15.8173,
+      "median_depth": 15,
+      "p90_depth": 18,
+      "leaf_sizes": {
+        "1": 30359,
+        "2": 919,
+        "3": 216,
+        "4": 84,
+        "5": 61,
+        "6": 30,
+        "7": 14,
+        "8": 12,
+        "9": 18,
+        "10": 5,
+        "11": 8,
+        "12": 7,
+        "13": 3,
+        "14": 2,
+        "15": 1,
+        "16": 2,
+        "31": 1
+      }
+    },
+    "name_fallback": {
+      "semantic_fallback_leaves": 1383,
+      "records_entering_name_phase": 4030,
+      "distinct_names_entering_name_phase": 4019,
+      "name_question_nodes": 2636
+    }
+  }
+}

@@ -1,0 +1,2508 @@
+{
+  "ambiguous_records": 3825,
+  "ambiguous_leaves": 1313,
+  "unused_tags_evaluated": 1963,
+  "ranking_note": "Scores estimate one-question splits of the current leaves; they are not claims about player-facing clarity.",
+  "tags": [
+    {
+      "tag": "card-names",
+      "included_matches": 7575,
+      "split_leaves": 598,
+      "affected_ambiguous_records": 2138,
+      "singleton_opportunities": 789,
+      "separated_pairs": 2369,
+      "gini_gain": 910.7972,
+      "entropy_bits": 1891.3224
+    },
+    {
+      "tag": "naming-scheme",
+      "included_matches": 7575,
+      "split_leaves": 598,
+      "affected_ambiguous_records": 2138,
+      "singleton_opportunities": 789,
+      "separated_pairs": 2369,
+      "gini_gain": 910.7972,
+      "entropy_bits": 1891.3224
+    },
+    {
+      "tag": "hate",
+      "included_matches": 4364,
+      "split_leaves": 276,
+      "affected_ambiguous_records": 1092,
+      "singleton_opportunities": 343,
+      "separated_pairs": 1310,
+      "gini_gain": 448.4123,
+      "entropy_bits": 939.235
+    },
+    {
+      "tag": "single-english-word-name",
+      "included_matches": 1257,
+      "split_leaves": 276,
+      "affected_ambiguous_records": 1126,
+      "singleton_opportunities": 342,
+      "separated_pairs": 1262,
+      "gini_gain": 432.1913,
+      "entropy_bits": 918.9453
+    },
+    {
+      "tag": "cycle",
+      "included_matches": 7836,
+      "split_leaves": 285,
+      "affected_ambiguous_records": 1025,
+      "singleton_opportunities": 410,
+      "separated_pairs": 1057,
+      "gini_gain": 409.1853,
+      "entropy_bits": 860.5975
+    },
+    {
+      "tag": "alliteration",
+      "included_matches": 3721,
+      "split_leaves": 258,
+      "affected_ambiguous_records": 969,
+      "singleton_opportunities": 363,
+      "separated_pairs": 956,
+      "gini_gain": 370.3716,
+      "entropy_bits": 786.9586
+    },
+    {
+      "tag": "namesake-spell",
+      "included_matches": 1507,
+      "split_leaves": 146,
+      "affected_ambiguous_records": 548,
+      "singleton_opportunities": 211,
+      "separated_pairs": 479,
+      "gini_gain": 197.6545,
+      "entropy_bits": 424.3638
+    },
+    {
+      "tag": "staple-with-sets-mechanic",
+      "included_matches": 1560,
+      "split_leaves": 82,
+      "affected_ambiguous_records": 374,
+      "singleton_opportunities": 99,
+      "separated_pairs": 633,
+      "gini_gain": 155.1851,
+      "entropy_bits": 324.742
+    },
+    {
+      "tag": "symmetrical",
+      "included_matches": 840,
+      "split_leaves": 87,
+      "affected_ambiguous_records": 297,
+      "singleton_opportunities": 116,
+      "separated_pairs": 284,
+      "gini_gain": 128.3768,
+      "entropy_bits": 265.7366
+    },
+    {
+      "tag": "color-hate",
+      "included_matches": 608,
+      "split_leaves": 69,
+      "affected_ambiguous_records": 331,
+      "singleton_opportunities": 82,
+      "separated_pairs": 382,
+      "gini_gain": 113.6565,
+      "entropy_bits": 247.4788
+    },
+    {
+      "tag": "hate-color",
+      "included_matches": 608,
+      "split_leaves": 69,
+      "affected_ambiguous_records": 331,
+      "singleton_opportunities": 82,
+      "separated_pairs": 382,
+      "gini_gain": 113.6565,
+      "entropy_bits": 247.4788
+    },
+    {
+      "tag": "combat-trick",
+      "included_matches": 982,
+      "split_leaves": 56,
+      "affected_ambiguous_records": 234,
+      "singleton_opportunities": 61,
+      "separated_pairs": 255,
+      "gini_gain": 92.8314,
+      "entropy_bits": 196.3968
+    },
+    {
+      "tag": "repeatable-crime",
+      "included_matches": 3462,
+      "split_leaves": 68,
+      "affected_ambiguous_records": 213,
+      "singleton_opportunities": 104,
+      "separated_pairs": 199,
+      "gini_gain": 91.79,
+      "entropy_bits": 189.9235
+    },
+    {
+      "tag": "gives-evasion",
+      "included_matches": 1052,
+      "split_leaves": 53,
+      "affected_ambiguous_records": 264,
+      "singleton_opportunities": 58,
+      "separated_pairs": 274,
+      "gini_gain": 90.5896,
+      "entropy_bits": 197.0362
+    },
+    {
+      "tag": "hate-set-mechanic",
+      "included_matches": 268,
+      "split_leaves": 55,
+      "affected_ambiguous_records": 290,
+      "singleton_opportunities": 64,
+      "separated_pairs": 270,
+      "gini_gain": 85.7803,
+      "entropy_bits": 192.2175
+    },
+    {
+      "tag": "name-matters",
+      "included_matches": 471,
+      "split_leaves": 52,
+      "affected_ambiguous_records": 279,
+      "singleton_opportunities": 63,
+      "separated_pairs": 276,
+      "gini_gain": 80.6586,
+      "entropy_bits": 182.6819
+    },
+    {
+      "tag": "card-advantage",
+      "included_matches": 5838,
+      "split_leaves": 55,
+      "affected_ambiguous_records": 200,
+      "singleton_opportunities": 77,
+      "separated_pairs": 170,
+      "gini_gain": 77.1017,
+      "entropy_bits": 163.4032
+    },
+    {
+      "tag": "self-replacement-effect",
+      "included_matches": 324,
+      "split_leaves": 43,
+      "affected_ambiguous_records": 257,
+      "singleton_opportunities": 50,
+      "separated_pairs": 343,
+      "gini_gain": 76.8837,
+      "entropy_bits": 173.3808
+    },
+    {
+      "tag": "creature-type-erratum",
+      "included_matches": 2250,
+      "split_leaves": 61,
+      "affected_ambiguous_records": 162,
+      "singleton_opportunities": 97,
+      "separated_pairs": 110,
+      "gini_gain": 73.3333,
+      "entropy_bits": 150.3038
+    },
+    {
+      "tag": "type-errata",
+      "included_matches": 2250,
+      "split_leaves": 61,
+      "affected_ambiguous_records": 162,
+      "singleton_opportunities": 97,
+      "separated_pairs": 110,
+      "gini_gain": 73.3333,
+      "entropy_bits": 150.3038
+    },
+    {
+      "tag": "synergy-artifact",
+      "included_matches": 982,
+      "split_leaves": 55,
+      "affected_ambiguous_records": 195,
+      "singleton_opportunities": 78,
+      "separated_pairs": 142,
+      "gini_gain": 71.4128,
+      "entropy_bits": 153.3166
+    },
+    {
+      "tag": "typal-artifact",
+      "included_matches": 982,
+      "split_leaves": 55,
+      "affected_ambiguous_records": 195,
+      "singleton_opportunities": 78,
+      "separated_pairs": 142,
+      "gini_gain": 71.4128,
+      "entropy_bits": 153.3166
+    },
+    {
+      "tag": "silver-border-mechanics",
+      "included_matches": 384,
+      "split_leaves": 50,
+      "affected_ambiguous_records": 201,
+      "singleton_opportunities": 70,
+      "separated_pairs": 175,
+      "gini_gain": 69.8179,
+      "entropy_bits": 151.4232
+    },
+    {
+      "tag": "un-design",
+      "included_matches": 390,
+      "split_leaves": 50,
+      "affected_ambiguous_records": 201,
+      "singleton_opportunities": 70,
+      "separated_pairs": 175,
+      "gini_gain": 69.8179,
+      "entropy_bits": 151.4232
+    },
+    {
+      "tag": "un-set-mechanics",
+      "included_matches": 384,
+      "split_leaves": 50,
+      "affected_ambiguous_records": 201,
+      "singleton_opportunities": 70,
+      "separated_pairs": 175,
+      "gini_gain": 69.8179,
+      "entropy_bits": 151.4232
+    },
+    {
+      "tag": "lands-matter",
+      "included_matches": 484,
+      "split_leaves": 48,
+      "affected_ambiguous_records": 246,
+      "singleton_opportunities": 65,
+      "separated_pairs": 209,
+      "gini_gain": 69.2649,
+      "entropy_bits": 157.8751
+    },
+    {
+      "tag": "synergy-land",
+      "included_matches": 484,
+      "split_leaves": 48,
+      "affected_ambiguous_records": 246,
+      "singleton_opportunities": 65,
+      "separated_pairs": 209,
+      "gini_gain": 69.2649,
+      "entropy_bits": 157.8751
+    },
+    {
+      "tag": "cheaper-than-mv",
+      "included_matches": 1885,
+      "split_leaves": 47,
+      "affected_ambiguous_records": 176,
+      "singleton_opportunities": 57,
+      "separated_pairs": 153,
+      "gini_gain": 68.4513,
+      "entropy_bits": 145.5304
+    },
+    {
+      "tag": "less-expensive-than-mv",
+      "included_matches": 1885,
+      "split_leaves": 47,
+      "affected_ambiguous_records": 176,
+      "singleton_opportunities": 57,
+      "separated_pairs": 153,
+      "gini_gain": 68.4513,
+      "entropy_bits": 145.5304
+    },
+    {
+      "tag": "hate-attacker",
+      "included_matches": 345,
+      "split_leaves": 43,
+      "affected_ambiguous_records": 171,
+      "singleton_opportunities": 54,
+      "separated_pairs": 149,
+      "gini_gain": 63.5016,
+      "entropy_bits": 135.8757
+    },
+    {
+      "tag": "cards-in-graveyard-matter",
+      "included_matches": 600,
+      "split_leaves": 47,
+      "affected_ambiguous_records": 196,
+      "singleton_opportunities": 66,
+      "separated_pairs": 152,
+      "gini_gain": 63.481,
+      "entropy_bits": 139.8404
+    },
+    {
+      "tag": "mana-dump",
+      "included_matches": 1464,
+      "split_leaves": 46,
+      "affected_ambiguous_records": 181,
+      "singleton_opportunities": 68,
+      "separated_pairs": 157,
+      "gini_gain": 63.1882,
+      "entropy_bits": 136.5648
+    },
+    {
+      "tag": "mana-sink",
+      "included_matches": 1464,
+      "split_leaves": 46,
+      "affected_ambiguous_records": 181,
+      "singleton_opportunities": 68,
+      "separated_pairs": 157,
+      "gini_gain": 63.1882,
+      "entropy_bits": 136.5648
+    },
+    {
+      "tag": "evasion",
+      "included_matches": 5002,
+      "split_leaves": 49,
+      "affected_ambiguous_records": 162,
+      "singleton_opportunities": 74,
+      "separated_pairs": 130,
+      "gini_gain": 62.4628,
+      "entropy_bits": 132.2099
+    },
+    {
+      "tag": "downside",
+      "included_matches": 1715,
+      "split_leaves": 42,
+      "affected_ambiguous_records": 206,
+      "singleton_opportunities": 58,
+      "separated_pairs": 187,
+      "gini_gain": 60.1736,
+      "entropy_bits": 135.4253
+    },
+    {
+      "tag": "drawback",
+      "included_matches": 1715,
+      "split_leaves": 42,
+      "affected_ambiguous_records": 206,
+      "singleton_opportunities": 58,
+      "separated_pairs": 187,
+      "gini_gain": 60.1736,
+      "entropy_bits": 135.4253
+    },
+    {
+      "tag": "own-at-cost",
+      "included_matches": 1715,
+      "split_leaves": 42,
+      "affected_ambiguous_records": 206,
+      "singleton_opportunities": 58,
+      "separated_pairs": 187,
+      "gini_gain": 60.1736,
+      "entropy_bits": 135.4253
+    },
+    {
+      "tag": "conditional-tapland",
+      "included_matches": 152,
+      "split_leaves": 22,
+      "affected_ambiguous_records": 139,
+      "singleton_opportunities": 20,
+      "separated_pairs": 230,
+      "gini_gain": 55.5636,
+      "entropy_bits": 116.8701
+    },
+    {
+      "tag": "etb-self-tapped-conditional",
+      "included_matches": 152,
+      "split_leaves": 22,
+      "affected_ambiguous_records": 139,
+      "singleton_opportunities": 20,
+      "separated_pairs": 230,
+      "gini_gain": 55.5636,
+      "entropy_bits": 116.8701
+    },
+    {
+      "tag": "giant-growth",
+      "included_matches": 286,
+      "split_leaves": 31,
+      "affected_ambiguous_records": 138,
+      "singleton_opportunities": 33,
+      "separated_pairs": 172,
+      "gini_gain": 54.8719,
+      "entropy_bits": 116.3184
+    },
+    {
+      "tag": "intervening-if-clause",
+      "included_matches": 2031,
+      "split_leaves": 42,
+      "affected_ambiguous_records": 123,
+      "singleton_opportunities": 60,
+      "separated_pairs": 93,
+      "gini_gain": 54.8444,
+      "entropy_bits": 112.9519
+    },
+    {
+      "tag": "non-acorn-silver-border",
+      "included_matches": 470,
+      "split_leaves": 39,
+      "affected_ambiguous_records": 189,
+      "singleton_opportunities": 54,
+      "separated_pairs": 150,
+      "gini_gain": 53.5327,
+      "entropy_bits": 121.5831
+    },
+    {
+      "tag": "potentially-black-border",
+      "included_matches": 470,
+      "split_leaves": 39,
+      "affected_ambiguous_records": 189,
+      "singleton_opportunities": 54,
+      "separated_pairs": 150,
+      "gini_gain": 53.5327,
+      "entropy_bits": 121.5831
+    },
+    {
+      "tag": "hate-artifact",
+      "included_matches": 192,
+      "split_leaves": 33,
+      "affected_ambiguous_records": 161,
+      "singleton_opportunities": 39,
+      "separated_pairs": 153,
+      "gini_gain": 52.9083,
+      "entropy_bits": 116.7512
+    },
+    {
+      "tag": "enlarge",
+      "included_matches": 293,
+      "split_leaves": 29,
+      "affected_ambiguous_records": 154,
+      "singleton_opportunities": 33,
+      "separated_pairs": 189,
+      "gini_gain": 51.3024,
+      "entropy_bits": 112.5113
+    },
+    {
+      "tag": "deprecated-mechanics",
+      "included_matches": 355,
+      "split_leaves": 36,
+      "affected_ambiguous_records": 143,
+      "singleton_opportunities": 52,
+      "separated_pairs": 129,
+      "gini_gain": 50.7494,
+      "entropy_bits": 110.1084
+    },
+    {
+      "tag": "virtual-legendary",
+      "included_matches": 212,
+      "split_leaves": 32,
+      "affected_ambiguous_records": 149,
+      "singleton_opportunities": 40,
+      "separated_pairs": 148,
+      "gini_gain": 49.4852,
+      "entropy_bits": 108.8713
+    },
+    {
+      "tag": "multiple-bodies",
+      "included_matches": 807,
+      "split_leaves": 36,
+      "affected_ambiguous_records": 110,
+      "singleton_opportunities": 54,
+      "separated_pairs": 93,
+      "gini_gain": 48.3944,
+      "entropy_bits": 99.7717
+    },
+    {
+      "tag": "hate-red",
+      "included_matches": 130,
+      "split_leaves": 34,
+      "affected_ambiguous_records": 165,
+      "singleton_opportunities": 48,
+      "separated_pairs": 143,
+      "gini_gain": 48.1561,
+      "entropy_bits": 107.2385
+    },
+    {
+      "tag": "red-hate",
+      "included_matches": 130,
+      "split_leaves": 34,
+      "affected_ambiguous_records": 165,
+      "singleton_opportunities": 48,
+      "separated_pairs": 143,
+      "gini_gain": 48.1561,
+      "entropy_bits": 107.2385
+    },
+    {
+      "tag": "cast-trigger",
+      "included_matches": 1578,
+      "split_leaves": 38,
+      "affected_ambiguous_records": 111,
+      "singleton_opportunities": 60,
+      "separated_pairs": 81,
+      "gini_gain": 46.9889,
+      "entropy_bits": 97.7459
+    },
+    {
+      "tag": "punny-name",
+      "included_matches": 473,
+      "split_leaves": 35,
+      "affected_ambiguous_records": 139,
+      "singleton_opportunities": 48,
+      "separated_pairs": 104,
+      "gini_gain": 46.8658,
+      "entropy_bits": 102.7926
+    },
+    {
+      "tag": "opponent-loses-life",
+      "included_matches": 805,
+      "split_leaves": 38,
+      "affected_ambiguous_records": 110,
+      "singleton_opportunities": 58,
+      "separated_pairs": 74,
+      "gini_gain": 46.6476,
+      "entropy_bits": 97.0614
+    },
+    {
+      "tag": "black-hate",
+      "included_matches": 152,
+      "split_leaves": 32,
+      "affected_ambiguous_records": 137,
+      "singleton_opportunities": 43,
+      "separated_pairs": 117,
+      "gini_gain": 46.1175,
+      "entropy_bits": 101.2527
+    },
+    {
+      "tag": "hate-black",
+      "included_matches": 152,
+      "split_leaves": 32,
+      "affected_ambiguous_records": 137,
+      "singleton_opportunities": 43,
+      "separated_pairs": 117,
+      "gini_gain": 46.1175,
+      "entropy_bits": 101.2527
+    },
+    {
+      "tag": "tax",
+      "included_matches": 423,
+      "split_leaves": 30,
+      "affected_ambiguous_records": 136,
+      "singleton_opportunities": 36,
+      "separated_pairs": 125,
+      "gini_gain": 45.9588,
+      "entropy_bits": 100.1261
+    },
+    {
+      "tag": "delayed-trigger",
+      "included_matches": 1159,
+      "split_leaves": 34,
+      "affected_ambiguous_records": 117,
+      "singleton_opportunities": 48,
+      "separated_pairs": 88,
+      "gini_gain": 45.1143,
+      "entropy_bits": 96.2807
+    },
+    {
+      "tag": "delayed-triggered-ability",
+      "included_matches": 1159,
+      "split_leaves": 34,
+      "affected_ambiguous_records": 117,
+      "singleton_opportunities": 48,
+      "separated_pairs": 88,
+      "gini_gain": 45.1143,
+      "entropy_bits": 96.2807
+    },
+    {
+      "tag": "type-errata-addition",
+      "included_matches": 1060,
+      "split_leaves": 35,
+      "affected_ambiguous_records": 102,
+      "singleton_opportunities": 51,
+      "separated_pairs": 76,
+      "gini_gain": 45.0667,
+      "entropy_bits": 92.9197
+    },
+    {
+      "tag": "prevent-blocker",
+      "included_matches": 296,
+      "split_leaves": 31,
+      "affected_ambiguous_records": 121,
+      "singleton_opportunities": 41,
+      "separated_pairs": 102,
+      "gini_gain": 43.7547,
+      "entropy_bits": 94.5971
+    },
+    {
+      "tag": "hate-white",
+      "included_matches": 119,
+      "split_leaves": 29,
+      "affected_ambiguous_records": 147,
+      "singleton_opportunities": 38,
+      "separated_pairs": 128,
+      "gini_gain": 42.4743,
+      "entropy_bits": 96.8103
+    },
+    {
+      "tag": "white-hate",
+      "included_matches": 119,
+      "split_leaves": 29,
+      "affected_ambiguous_records": 147,
+      "singleton_opportunities": 38,
+      "separated_pairs": 128,
+      "gini_gain": 42.4743,
+      "entropy_bits": 96.8103
+    },
+    {
+      "tag": "creature-count-matters",
+      "included_matches": 282,
+      "split_leaves": 26,
+      "affected_ambiguous_records": 153,
+      "singleton_opportunities": 31,
+      "separated_pairs": 160,
+      "gini_gain": 42.2509,
+      "entropy_bits": 95.1154
+    },
+    {
+      "tag": "manaless-value",
+      "included_matches": 211,
+      "split_leaves": 32,
+      "affected_ambiguous_records": 123,
+      "singleton_opportunities": 47,
+      "separated_pairs": 93,
+      "gini_gain": 41.4128,
+      "entropy_bits": 90.0423
+    },
+    {
+      "tag": "blue-hate",
+      "included_matches": 95,
+      "split_leaves": 25,
+      "affected_ambiguous_records": 174,
+      "singleton_opportunities": 27,
+      "separated_pairs": 165,
+      "gini_gain": 41.3893,
+      "entropy_bits": 97.538
+    },
+    {
+      "tag": "hate-blue",
+      "included_matches": 95,
+      "split_leaves": 25,
+      "affected_ambiguous_records": 174,
+      "singleton_opportunities": 27,
+      "separated_pairs": 165,
+      "gini_gain": 41.3893,
+      "entropy_bits": 97.538
+    },
+    {
+      "tag": "attacking-matters",
+      "included_matches": 1055,
+      "split_leaves": 32,
+      "affected_ambiguous_records": 99,
+      "singleton_opportunities": 44,
+      "separated_pairs": 69,
+      "gini_gain": 41.2667,
+      "entropy_bits": 86.3296
+    },
+    {
+      "tag": "library-manipulation",
+      "included_matches": 996,
+      "split_leaves": 29,
+      "affected_ambiguous_records": 129,
+      "singleton_opportunities": 38,
+      "separated_pairs": 104,
+      "gini_gain": 41.1188,
+      "entropy_bits": 90.7733
+    },
+    {
+      "tag": "triggered-ability",
+      "included_matches": 14854,
+      "split_leaves": 29,
+      "affected_ambiguous_records": 116,
+      "singleton_opportunities": 37,
+      "separated_pairs": 92,
+      "gini_gain": 41.081,
+      "entropy_bits": 89.4609
+    },
+    {
+      "tag": "color-change",
+      "included_matches": 239,
+      "split_leaves": 26,
+      "affected_ambiguous_records": 148,
+      "singleton_opportunities": 33,
+      "separated_pairs": 144,
+      "gini_gain": 41.0607,
+      "entropy_bits": 93.7097
+    },
+    {
+      "tag": "group-hug",
+      "included_matches": 393,
+      "split_leaves": 30,
+      "affected_ambiguous_records": 95,
+      "singleton_opportunities": 45,
+      "separated_pairs": 77,
+      "gini_gain": 39.2667,
+      "entropy_bits": 82.2647
+    },
+    {
+      "tag": "funny-ruling",
+      "included_matches": 352,
+      "split_leaves": 27,
+      "affected_ambiguous_records": 135,
+      "singleton_opportunities": 35,
+      "separated_pairs": 111,
+      "gini_gain": 38.9164,
+      "entropy_bits": 87.9059
+    },
+    {
+      "tag": "fun-ruling",
+      "included_matches": 352,
+      "split_leaves": 27,
+      "affected_ambiguous_records": 135,
+      "singleton_opportunities": 35,
+      "separated_pairs": 111,
+      "gini_gain": 38.9164,
+      "entropy_bits": 87.9059
+    },
+    {
+      "tag": "deprecated-card-types",
+      "included_matches": 257,
+      "split_leaves": 19,
+      "affected_ambiguous_records": 140,
+      "singleton_opportunities": 22,
+      "separated_pairs": 241,
+      "gini_gain": 38.4887,
+      "entropy_bits": 88.6716
+    },
+    {
+      "tag": "interrupt",
+      "included_matches": 52,
+      "split_leaves": 19,
+      "affected_ambiguous_records": 140,
+      "singleton_opportunities": 22,
+      "separated_pairs": 241,
+      "gini_gain": 38.4887,
+      "entropy_bits": 88.6716
+    },
+    {
+      "tag": "cost-reducer-self",
+      "included_matches": 514,
+      "split_leaves": 25,
+      "affected_ambiguous_records": 110,
+      "singleton_opportunities": 26,
+      "separated_pairs": 92,
+      "gini_gain": 38.1462,
+      "entropy_bits": 82.9808
+    },
+    {
+      "tag": "discount-self",
+      "included_matches": 514,
+      "split_leaves": 25,
+      "affected_ambiguous_records": 110,
+      "singleton_opportunities": 26,
+      "separated_pairs": 92,
+      "gini_gain": 38.1462,
+      "entropy_bits": 82.9808
+    },
+    {
+      "tag": "green-hate",
+      "included_matches": 91,
+      "split_leaves": 26,
+      "affected_ambiguous_records": 144,
+      "singleton_opportunities": 34,
+      "separated_pairs": 124,
+      "gini_gain": 37.7395,
+      "entropy_bits": 86.2162
+    },
+    {
+      "tag": "hate-green",
+      "included_matches": 91,
+      "split_leaves": 26,
+      "affected_ambiguous_records": 144,
+      "singleton_opportunities": 34,
+      "separated_pairs": 124,
+      "gini_gain": 37.7395,
+      "entropy_bits": 86.2162
+    },
+    {
+      "tag": "shrink",
+      "included_matches": 146,
+      "split_leaves": 25,
+      "affected_ambiguous_records": 142,
+      "singleton_opportunities": 31,
+      "separated_pairs": 124,
+      "gini_gain": 37.2168,
+      "entropy_bits": 84.052
+    },
+    {
+      "tag": "thingfall",
+      "included_matches": 958,
+      "split_leaves": 28,
+      "affected_ambiguous_records": 95,
+      "singleton_opportunities": 42,
+      "separated_pairs": 69,
+      "gini_gain": 35.8848,
+      "entropy_bits": 76.4832
+    },
+    {
+      "tag": "hate-blocker",
+      "included_matches": 436,
+      "split_leaves": 23,
+      "affected_ambiguous_records": 100,
+      "singleton_opportunities": 27,
+      "separated_pairs": 90,
+      "gini_gain": 35.5462,
+      "entropy_bits": 76.4892
+    },
+    {
+      "tag": "multiplayer",
+      "included_matches": 555,
+      "split_leaves": 24,
+      "affected_ambiguous_records": 138,
+      "singleton_opportunities": 31,
+      "separated_pairs": 114,
+      "gini_gain": 35.3951,
+      "entropy_bits": 83.0232
+    },
+    {
+      "tag": "burn-with-set-mechanic",
+      "included_matches": 275,
+      "split_leaves": 21,
+      "affected_ambiguous_records": 82,
+      "singleton_opportunities": 27,
+      "separated_pairs": 104,
+      "gini_gain": 35.3154,
+      "entropy_bits": 73.2091
+    },
+    {
+      "tag": "burn-with-sets-mechanic",
+      "included_matches": 275,
+      "split_leaves": 21,
+      "affected_ambiguous_records": 82,
+      "singleton_opportunities": 27,
+      "separated_pairs": 104,
+      "gini_gain": 35.3154,
+      "entropy_bits": 73.2091
+    },
+    {
+      "tag": "hate-typal",
+      "included_matches": 279,
+      "split_leaves": 25,
+      "affected_ambiguous_records": 138,
+      "singleton_opportunities": 35,
+      "separated_pairs": 119,
+      "gini_gain": 35.0458,
+      "entropy_bits": 80.0294
+    },
+    {
+      "tag": "tribal-hate",
+      "included_matches": 279,
+      "split_leaves": 25,
+      "affected_ambiguous_records": 138,
+      "singleton_opportunities": 35,
+      "separated_pairs": 119,
+      "gini_gain": 35.0458,
+      "entropy_bits": 80.0294
+    },
+    {
+      "tag": "combat-manipulation",
+      "included_matches": 296,
+      "split_leaves": 24,
+      "affected_ambiguous_records": 100,
+      "singleton_opportunities": 31,
+      "separated_pairs": 86,
+      "gini_gain": 34.8975,
+      "entropy_bits": 75.9839
+    },
+    {
+      "tag": "hand-size-matters",
+      "included_matches": 276,
+      "split_leaves": 26,
+      "affected_ambiguous_records": 114,
+      "singleton_opportunities": 37,
+      "separated_pairs": 88,
+      "gini_gain": 34.8699,
+      "entropy_bits": 77.9312
+    },
+    {
+      "tag": "handsize-matters",
+      "included_matches": 276,
+      "split_leaves": 26,
+      "affected_ambiguous_records": 114,
+      "singleton_opportunities": 37,
+      "separated_pairs": 88,
+      "gini_gain": 34.8699,
+      "entropy_bits": 77.9312
+    },
+    {
+      "tag": "high-hand-size-matters",
+      "included_matches": 276,
+      "split_leaves": 26,
+      "affected_ambiguous_records": 114,
+      "singleton_opportunities": 37,
+      "separated_pairs": 88,
+      "gini_gain": 34.8699,
+      "entropy_bits": 77.9312
+    },
+    {
+      "tag": "low-hand-size-matters",
+      "included_matches": 276,
+      "split_leaves": 26,
+      "affected_ambiguous_records": 114,
+      "singleton_opportunities": 37,
+      "separated_pairs": 88,
+      "gini_gain": 34.8699,
+      "entropy_bits": 77.9312
+    },
+    {
+      "tag": "indefinite-effect",
+      "included_matches": 409,
+      "split_leaves": 19,
+      "affected_ambiguous_records": 112,
+      "singleton_opportunities": 22,
+      "separated_pairs": 129,
+      "gini_gain": 34.2881,
+      "entropy_bits": 76.398
+    },
+    {
+      "tag": "permanent-effect",
+      "included_matches": 409,
+      "split_leaves": 19,
+      "affected_ambiguous_records": 112,
+      "singleton_opportunities": 22,
+      "separated_pairs": 129,
+      "gini_gain": 34.2881,
+      "entropy_bits": 76.398
+    },
+    {
+      "tag": "permanent-p-t-boost",
+      "included_matches": 397,
+      "split_leaves": 19,
+      "affected_ambiguous_records": 112,
+      "singleton_opportunities": 22,
+      "separated_pairs": 129,
+      "gini_gain": 34.2881,
+      "entropy_bits": 76.398
+    },
+    {
+      "tag": "untracked-indefinite-effect",
+      "included_matches": 397,
+      "split_leaves": 19,
+      "affected_ambiguous_records": 112,
+      "singleton_opportunities": 22,
+      "separated_pairs": 129,
+      "gini_gain": 34.2881,
+      "entropy_bits": 76.398
+    },
+    {
+      "tag": "french-vanilla-aura",
+      "included_matches": 102,
+      "split_leaves": 18,
+      "affected_ambiguous_records": 92,
+      "singleton_opportunities": 14,
+      "separated_pairs": 97,
+      "gini_gain": 33.9952,
+      "entropy_bits": 72.84
+    },
+    {
+      "tag": "cast-from-nonhand",
+      "included_matches": 814,
+      "split_leaves": 24,
+      "affected_ambiguous_records": 103,
+      "singleton_opportunities": 34,
+      "separated_pairs": 88,
+      "gini_gain": 33.6636,
+      "entropy_bits": 74.0031
+    },
+    {
+      "tag": "gives-castable-from-nonhand",
+      "included_matches": 814,
+      "split_leaves": 24,
+      "affected_ambiguous_records": 103,
+      "singleton_opportunities": 34,
+      "separated_pairs": 88,
+      "gini_gain": 33.6636,
+      "entropy_bits": 74.0031
+    },
+    {
+      "tag": "synergy-blocker",
+      "included_matches": 96,
+      "split_leaves": 22,
+      "affected_ambiguous_records": 110,
+      "singleton_opportunities": 26,
+      "separated_pairs": 96,
+      "gini_gain": 33.4323,
+      "entropy_bits": 75.3123
+    },
+    {
+      "tag": "counterspell-soft",
+      "included_matches": 135,
+      "split_leaves": 8,
+      "affected_ambiguous_records": 75,
+      "singleton_opportunities": 5,
+      "separated_pairs": 325,
+      "gini_gain": 33.1,
+      "entropy_bits": 68.274
+    },
+    {
+      "tag": "soft-counter",
+      "included_matches": 135,
+      "split_leaves": 8,
+      "affected_ambiguous_records": 75,
+      "singleton_opportunities": 5,
+      "separated_pairs": 325,
+      "gini_gain": 33.1,
+      "entropy_bits": 68.274
+    },
+    {
+      "tag": "gives-reach",
+      "included_matches": 88,
+      "split_leaves": 18,
+      "affected_ambiguous_records": 112,
+      "singleton_opportunities": 18,
+      "separated_pairs": 131,
+      "gini_gain": 33.0977,
+      "entropy_bits": 74.4661
+    },
+    {
+      "tag": "vanilla-aura",
+      "included_matches": 44,
+      "split_leaves": 19,
+      "affected_ambiguous_records": 87,
+      "singleton_opportunities": 16,
+      "separated_pairs": 78,
+      "gini_gain": 32.2921,
+      "entropy_bits": 69.4001
+    },
+    {
+      "tag": "black-lord",
+      "included_matches": 171,
+      "split_leaves": 23,
+      "affected_ambiguous_records": 106,
+      "singleton_opportunities": 31,
+      "separated_pairs": 83,
+      "gini_gain": 32.1015,
+      "entropy_bits": 72.2807
+    },
+    {
+      "tag": "lord-black",
+      "included_matches": 171,
+      "split_leaves": 23,
+      "affected_ambiguous_records": 106,
+      "singleton_opportunities": 31,
+      "separated_pairs": 83,
+      "gini_gain": 32.1015,
+      "entropy_bits": 72.2807
+    },
+    {
+      "tag": "synergy-black",
+      "included_matches": 171,
+      "split_leaves": 23,
+      "affected_ambiguous_records": 106,
+      "singleton_opportunities": 31,
+      "separated_pairs": 83,
+      "gini_gain": 32.1015,
+      "entropy_bits": 72.2807
+    },
+    {
+      "tag": "impulse",
+      "included_matches": 518,
+      "split_leaves": 22,
+      "affected_ambiguous_records": 76,
+      "singleton_opportunities": 29,
+      "separated_pairs": 65,
+      "gini_gain": 31.9619,
+      "entropy_bits": 66.7451
+    },
+    {
+      "tag": "usg-storyline-in-cards",
+      "included_matches": 63,
+      "split_leaves": 23,
+      "affected_ambiguous_records": 91,
+      "singleton_opportunities": 32,
+      "separated_pairs": 78,
+      "gini_gain": 31.91,
+      "entropy_bits": 69.5778
+    },
+    {
+      "tag": "hate-counterspell",
+      "included_matches": 150,
+      "split_leaves": 21,
+      "affected_ambiguous_records": 97,
+      "singleton_opportunities": 25,
+      "separated_pairs": 91,
+      "gini_gain": 31.8361,
+      "entropy_bits": 70.2963
+    },
+    {
+      "tag": "giant-growth-with-set-mechanic",
+      "included_matches": 130,
+      "split_leaves": 15,
+      "affected_ambiguous_records": 81,
+      "singleton_opportunities": 15,
+      "separated_pairs": 125,
+      "gini_gain": 31.2657,
+      "entropy_bits": 66.8925
+    },
+    {
+      "tag": "giant-growth-with-sets-mechanic",
+      "included_matches": 130,
+      "split_leaves": 15,
+      "affected_ambiguous_records": 81,
+      "singleton_opportunities": 15,
+      "separated_pairs": 125,
+      "gini_gain": 31.2657,
+      "entropy_bits": 66.8925
+    },
+    {
+      "tag": "tap-outlet",
+      "included_matches": 783,
+      "split_leaves": 22,
+      "affected_ambiguous_records": 92,
+      "singleton_opportunities": 31,
+      "separated_pairs": 82,
+      "gini_gain": 30.7923,
+      "entropy_bits": 67.092
+    },
+    {
+      "tag": "hate-regenerate",
+      "included_matches": 139,
+      "split_leaves": 20,
+      "affected_ambiguous_records": 97,
+      "singleton_opportunities": 23,
+      "separated_pairs": 87,
+      "gini_gain": 30.6111,
+      "entropy_bits": 68.3787
+    },
+    {
+      "tag": "hate-regeneration",
+      "included_matches": 139,
+      "split_leaves": 20,
+      "affected_ambiguous_records": 97,
+      "singleton_opportunities": 23,
+      "separated_pairs": 87,
+      "gini_gain": 30.6111,
+      "entropy_bits": 68.3787
+    },
+    {
+      "tag": "prevent-regeneration",
+      "included_matches": 139,
+      "split_leaves": 20,
+      "affected_ambiguous_records": 97,
+      "singleton_opportunities": 23,
+      "separated_pairs": 87,
+      "gini_gain": 30.6111,
+      "entropy_bits": 68.3787
+    },
+    {
+      "tag": "stops-regeneration",
+      "included_matches": 139,
+      "split_leaves": 20,
+      "affected_ambiguous_records": 97,
+      "singleton_opportunities": 23,
+      "separated_pairs": 87,
+      "gini_gain": 30.6111,
+      "entropy_bits": 68.3787
+    },
+    {
+      "tag": "casting-restriction",
+      "included_matches": 68,
+      "split_leaves": 18,
+      "affected_ambiguous_records": 93,
+      "singleton_opportunities": 17,
+      "separated_pairs": 87,
+      "gini_gain": 30.3864,
+      "entropy_bits": 66.9357
+    },
+    {
+      "tag": "timing-restriction",
+      "included_matches": 52,
+      "split_leaves": 18,
+      "affected_ambiguous_records": 93,
+      "singleton_opportunities": 17,
+      "separated_pairs": 87,
+      "gini_gain": 30.3864,
+      "entropy_bits": 66.9357
+    },
+    {
+      "tag": "dnd",
+      "included_matches": 480,
+      "split_leaves": 24,
+      "affected_ambiguous_records": 107,
+      "singleton_opportunities": 38,
+      "separated_pairs": 83,
+      "gini_gain": 30.3182,
+      "entropy_bits": 68.1663
+    },
+    {
+      "tag": "synergy-forest",
+      "included_matches": 117,
+      "split_leaves": 15,
+      "affected_ambiguous_records": 85,
+      "singleton_opportunities": 18,
+      "separated_pairs": 114,
+      "gini_gain": 30.122,
+      "entropy_bits": 64.8185
+    },
+    {
+      "tag": "counterspell-creature",
+      "included_matches": 49,
+      "split_leaves": 10,
+      "affected_ambiguous_records": 88,
+      "singleton_opportunities": 7,
+      "separated_pairs": 251,
+      "gini_gain": 30.0374,
+      "entropy_bits": 66.0861
+    },
+    {
+      "tag": "scales-with-multiple",
+      "included_matches": 67,
+      "split_leaves": 18,
+      "affected_ambiguous_records": 122,
+      "singleton_opportunities": 20,
+      "separated_pairs": 119,
+      "gini_gain": 29.9082,
+      "entropy_bits": 68.9726
+    },
+    {
+      "tag": "tmp-storyline-in-cards",
+      "included_matches": 60,
+      "split_leaves": 20,
+      "affected_ambiguous_records": 95,
+      "singleton_opportunities": 23,
+      "separated_pairs": 75,
+      "gini_gain": 29.8619,
+      "entropy_bits": 67.1934
+    },
+    {
+      "tag": "counterspell-with-set-mechanic",
+      "included_matches": 160,
+      "split_leaves": 10,
+      "affected_ambiguous_records": 73,
+      "singleton_opportunities": 9,
+      "separated_pairs": 248,
+      "gini_gain": 29.8415,
+      "entropy_bits": 62.7473
+    },
+    {
+      "tag": "counterspell-with-sets-mechanic",
+      "included_matches": 160,
+      "split_leaves": 10,
+      "affected_ambiguous_records": 73,
+      "singleton_opportunities": 9,
+      "separated_pairs": 248,
+      "gini_gain": 29.8415,
+      "entropy_bits": 62.7473
+    },
+    {
+      "tag": "synergy-blue",
+      "included_matches": 151,
+      "split_leaves": 18,
+      "affected_ambiguous_records": 116,
+      "singleton_opportunities": 23,
+      "separated_pairs": 152,
+      "gini_gain": 29.5209,
+      "entropy_bits": 69.3547
+    },
+    {
+      "tag": "synergy-commander",
+      "included_matches": 175,
+      "split_leaves": 20,
+      "affected_ambiguous_records": 87,
+      "singleton_opportunities": 27,
+      "separated_pairs": 85,
+      "gini_gain": 29.4393,
+      "entropy_bits": 64.3762
+    },
+    {
+      "tag": "synergy-green",
+      "included_matches": 188,
+      "split_leaves": 20,
+      "affected_ambiguous_records": 96,
+      "singleton_opportunities": 26,
+      "separated_pairs": 89,
+      "gini_gain": 29.4,
+      "entropy_bits": 66.1335
+    },
+    {
+      "tag": "weaker-in-singleton-formats",
+      "included_matches": 112,
+      "split_leaves": 20,
+      "affected_ambiguous_records": 101,
+      "singleton_opportunities": 26,
+      "separated_pairs": 86,
+      "gini_gain": 29.3919,
+      "entropy_bits": 66.611
+    },
+    {
+      "tag": "worse-in-singleton",
+      "included_matches": 112,
+      "split_leaves": 20,
+      "affected_ambiguous_records": 101,
+      "singleton_opportunities": 26,
+      "separated_pairs": 86,
+      "gini_gain": 29.3919,
+      "entropy_bits": 66.611
+    },
+    {
+      "tag": "combat-timing-restriction",
+      "included_matches": 42,
+      "split_leaves": 17,
+      "affected_ambiguous_records": 90,
+      "singleton_opportunities": 16,
+      "separated_pairs": 85,
+      "gini_gain": 29.0531,
+      "entropy_bits": 64.1808
+    },
+    {
+      "tag": "instant-rebate",
+      "included_matches": 673,
+      "split_leaves": 19,
+      "affected_ambiguous_records": 69,
+      "singleton_opportunities": 27,
+      "separated_pairs": 75,
+      "gini_gain": 29.0444,
+      "entropy_bits": 60.4944
+    },
+    {
+      "tag": "refund",
+      "included_matches": 673,
+      "split_leaves": 19,
+      "affected_ambiguous_records": 69,
+      "singleton_opportunities": 27,
+      "separated_pairs": 75,
+      "gini_gain": 29.0444,
+      "entropy_bits": 60.4944
+    },
+    {
+      "tag": "meme",
+      "included_matches": 121,
+      "split_leaves": 23,
+      "affected_ambiguous_records": 84,
+      "singleton_opportunities": 36,
+      "separated_pairs": 61,
+      "gini_gain": 28.8587,
+      "entropy_bits": 62.7563
+    },
+    {
+      "tag": "gives-vigilance",
+      "included_matches": 242,
+      "split_leaves": 18,
+      "affected_ambiguous_records": 86,
+      "singleton_opportunities": 20,
+      "separated_pairs": 84,
+      "gini_gain": 28.7187,
+      "entropy_bits": 63.0833
+    },
+    {
+      "tag": "top-deck-manipulation",
+      "included_matches": 919,
+      "split_leaves": 21,
+      "affected_ambiguous_records": 95,
+      "singleton_opportunities": 29,
+      "separated_pairs": 74,
+      "gini_gain": 28.4045,
+      "entropy_bits": 63.4863
+    },
+    {
+      "tag": "synergy-enchantment",
+      "included_matches": 247,
+      "split_leaves": 22,
+      "affected_ambiguous_records": 77,
+      "singleton_opportunities": 31,
+      "separated_pairs": 56,
+      "gini_gain": 28.2667,
+      "entropy_bits": 60.2683
+    },
+    {
+      "tag": "synergy-sorcery",
+      "included_matches": 487,
+      "split_leaves": 22,
+      "affected_ambiguous_records": 78,
+      "singleton_opportunities": 32,
+      "separated_pairs": 56,
+      "gini_gain": 28.1444,
+      "entropy_bits": 60.7103
+    },
+    {
+      "tag": "life-total-matters-self",
+      "included_matches": 74,
+      "split_leaves": 18,
+      "affected_ambiguous_records": 124,
+      "singleton_opportunities": 22,
+      "separated_pairs": 106,
+      "gini_gain": 28.0657,
+      "entropy_bits": 68.1063
+    },
+    {
+      "tag": "poison-mechanics",
+      "included_matches": 190,
+      "split_leaves": 21,
+      "affected_ambiguous_records": 109,
+      "singleton_opportunities": 31,
+      "separated_pairs": 88,
+      "gini_gain": 27.8148,
+      "entropy_bits": 63.2051
+    },
+    {
+      "tag": "red-effect",
+      "included_matches": 580,
+      "split_leaves": 18,
+      "affected_ambiguous_records": 87,
+      "singleton_opportunities": 22,
+      "separated_pairs": 77,
+      "gini_gain": 27.7175,
+      "entropy_bits": 61.7975
+    },
+    {
+      "tag": "flying-hate",
+      "included_matches": 198,
+      "split_leaves": 18,
+      "affected_ambiguous_records": 102,
+      "singleton_opportunities": 23,
+      "separated_pairs": 96,
+      "gini_gain": 27.5604,
+      "entropy_bits": 63.8254
+    },
+    {
+      "tag": "hate-flying",
+      "included_matches": 198,
+      "split_leaves": 18,
+      "affected_ambiguous_records": 102,
+      "singleton_opportunities": 23,
+      "separated_pairs": 96,
+      "gini_gain": 27.5604,
+      "entropy_bits": 63.8254
+    },
+    {
+      "tag": "synergy-swamp",
+      "included_matches": 95,
+      "split_leaves": 10,
+      "affected_ambiguous_records": 74,
+      "singleton_opportunities": 7,
+      "separated_pairs": 118,
+      "gini_gain": 27.4535,
+      "entropy_bits": 58.456
+    },
+    {
+      "tag": "synergy-mountain",
+      "included_matches": 88,
+      "split_leaves": 12,
+      "affected_ambiguous_records": 65,
+      "singleton_opportunities": 11,
+      "separated_pairs": 98,
+      "gini_gain": 27.3303,
+      "entropy_bits": 57.1572
+    },
+    {
+      "tag": "synergy-instant",
+      "included_matches": 488,
+      "split_leaves": 22,
+      "affected_ambiguous_records": 70,
+      "singleton_opportunities": 33,
+      "separated_pairs": 48,
+      "gini_gain": 27.2667,
+      "entropy_bits": 57.8164
+    },
+    {
+      "tag": "synergy-legendary",
+      "included_matches": 256,
+      "split_leaves": 20,
+      "affected_ambiguous_records": 81,
+      "singleton_opportunities": 26,
+      "separated_pairs": 62,
+      "gini_gain": 27.0444,
+      "entropy_bits": 59.086
+    },
+    {
+      "tag": "cast-trigger-you",
+      "included_matches": 1099,
+      "split_leaves": 22,
+      "affected_ambiguous_records": 69,
+      "singleton_opportunities": 35,
+      "separated_pairs": 49,
+      "gini_gain": 26.9556,
+      "entropy_bits": 56.8331
+    },
+    {
+      "tag": "prevent-activation",
+      "included_matches": 87,
+      "split_leaves": 15,
+      "affected_ambiguous_records": 82,
+      "singleton_opportunities": 15,
+      "separated_pairs": 84,
+      "gini_gain": 26.941,
+      "entropy_bits": 59.7631
+    },
+    {
+      "tag": "synergy-white",
+      "included_matches": 202,
+      "split_leaves": 19,
+      "affected_ambiguous_records": 91,
+      "singleton_opportunities": 26,
+      "separated_pairs": 72,
+      "gini_gain": 26.6658,
+      "entropy_bits": 60.5383
+    },
+    {
+      "tag": "toll",
+      "included_matches": 182,
+      "split_leaves": 17,
+      "affected_ambiguous_records": 63,
+      "singleton_opportunities": 21,
+      "separated_pairs": 63,
+      "gini_gain": 26.2111,
+      "entropy_bits": 54.9169
+    },
+    {
+      "tag": "flavors-of-vanilla",
+      "included_matches": 3951,
+      "split_leaves": 25,
+      "affected_ambiguous_records": 54,
+      "singleton_opportunities": 47,
+      "separated_pairs": 29,
+      "gini_gain": 26.1667,
+      "entropy_bits": 52.7549
+    },
+    {
+      "tag": "paper-compatible",
+      "included_matches": 109,
+      "split_leaves": 20,
+      "affected_ambiguous_records": 81,
+      "singleton_opportunities": 29,
+      "separated_pairs": 61,
+      "gini_gain": 26.1333,
+      "entropy_bits": 57.565
+    },
+    {
+      "tag": "burn-to-exile",
+      "included_matches": 56,
+      "split_leaves": 15,
+      "affected_ambiguous_records": 76,
+      "singleton_opportunities": 17,
+      "separated_pairs": 84,
+      "gini_gain": 26.1013,
+      "entropy_bits": 57.1581
+    },
+    {
+      "tag": "disintegrate",
+      "included_matches": 56,
+      "split_leaves": 15,
+      "affected_ambiguous_records": 76,
+      "singleton_opportunities": 17,
+      "separated_pairs": 84,
+      "gini_gain": 26.1013,
+      "entropy_bits": 57.1581
+    },
+    {
+      "tag": "synergy-island",
+      "included_matches": 84,
+      "split_leaves": 12,
+      "affected_ambiguous_records": 59,
+      "singleton_opportunities": 13,
+      "separated_pairs": 92,
+      "gini_gain": 25.997,
+      "entropy_bits": 53.6892
+    },
+    {
+      "tag": "vanilla-equipment",
+      "included_matches": 34,
+      "split_leaves": 8,
+      "affected_ambiguous_records": 62,
+      "singleton_opportunities": 4,
+      "separated_pairs": 134,
+      "gini_gain": 25.9797,
+      "entropy_bits": 53.8502
+    },
+    {
+      "tag": "gives-deathtouch",
+      "included_matches": 162,
+      "split_leaves": 18,
+      "affected_ambiguous_records": 80,
+      "singleton_opportunities": 22,
+      "separated_pairs": 66,
+      "gini_gain": 25.9462,
+      "entropy_bits": 56.6254
+    },
+    {
+      "tag": "burst-draw",
+      "included_matches": 537,
+      "split_leaves": 18,
+      "affected_ambiguous_records": 65,
+      "singleton_opportunities": 23,
+      "separated_pairs": 49,
+      "gini_gain": 25.0333,
+      "entropy_bits": 53.4839
+    },
+    {
+      "tag": "dice",
+      "included_matches": 142,
+      "split_leaves": 19,
+      "affected_ambiguous_records": 80,
+      "singleton_opportunities": 28,
+      "separated_pairs": 61,
+      "gini_gain": 24.9293,
+      "entropy_bits": 55.375
+    },
+    {
+      "tag": "dice-roll",
+      "included_matches": 142,
+      "split_leaves": 19,
+      "affected_ambiguous_records": 80,
+      "singleton_opportunities": 28,
+      "separated_pairs": 61,
+      "gini_gain": 24.9293,
+      "entropy_bits": 55.375
+    },
+    {
+      "tag": "repeatable-card-advantage",
+      "included_matches": 2444,
+      "split_leaves": 18,
+      "affected_ambiguous_records": 73,
+      "singleton_opportunities": 24,
+      "separated_pairs": 59,
+      "gini_gain": 24.7311,
+      "entropy_bits": 53.7803
+    },
+    {
+      "tag": "gains-flash",
+      "included_matches": 44,
+      "split_leaves": 17,
+      "affected_ambiguous_records": 75,
+      "singleton_opportunities": 20,
+      "separated_pairs": 58,
+      "gini_gain": 24.681,
+      "entropy_bits": 54.8129
+    },
+    {
+      "tag": "hate-tapped",
+      "included_matches": 147,
+      "split_leaves": 20,
+      "affected_ambiguous_records": 61,
+      "singleton_opportunities": 31,
+      "separated_pairs": 41,
+      "gini_gain": 24.6333,
+      "entropy_bits": 51.9742
+    },
+    {
+      "tag": "exile-self",
+      "included_matches": 1276,
+      "split_leaves": 19,
+      "affected_ambiguous_records": 66,
+      "singleton_opportunities": 27,
+      "separated_pairs": 48,
+      "gini_gain": 24.5754,
+      "entropy_bits": 52.5293
+    },
+    {
+      "tag": "exiles-self",
+      "included_matches": 1276,
+      "split_leaves": 19,
+      "affected_ambiguous_records": 66,
+      "singleton_opportunities": 27,
+      "separated_pairs": 48,
+      "gini_gain": 24.5754,
+      "entropy_bits": 52.5293
+    },
+    {
+      "tag": "out-of-color-token",
+      "included_matches": 393,
+      "split_leaves": 18,
+      "affected_ambiguous_records": 68,
+      "singleton_opportunities": 26,
+      "separated_pairs": 56,
+      "gini_gain": 24.5111,
+      "entropy_bits": 52.9777
+    },
+    {
+      "tag": "synergy-plains",
+      "included_matches": 58,
+      "split_leaves": 11,
+      "affected_ambiguous_records": 55,
+      "singleton_opportunities": 12,
+      "separated_pairs": 87,
+      "gini_gain": 24.5,
+      "entropy_bits": 50.4484
+    },
+    {
+      "tag": "potentially-free",
+      "included_matches": 74,
+      "split_leaves": 18,
+      "affected_ambiguous_records": 67,
+      "singleton_opportunities": 25,
+      "separated_pairs": 51,
+      "gini_gain": 23.8628,
+      "entropy_bits": 51.2832
+    },
+    {
+      "tag": "type-addition-human",
+      "included_matches": 573,
+      "split_leaves": 21,
+      "affected_ambiguous_records": 50,
+      "singleton_opportunities": 35,
+      "separated_pairs": 30,
+      "gini_gain": 23.8333,
+      "entropy_bits": 48.2647
+    },
+    {
+      "tag": "synergy-color-multi",
+      "included_matches": 87,
+      "split_leaves": 16,
+      "affected_ambiguous_records": 87,
+      "singleton_opportunities": 18,
+      "separated_pairs": 71,
+      "gini_gain": 23.6643,
+      "entropy_bits": 54.4283
+    },
+    {
+      "tag": "synergy-multicolor",
+      "included_matches": 87,
+      "split_leaves": 16,
+      "affected_ambiguous_records": 87,
+      "singleton_opportunities": 18,
+      "separated_pairs": 71,
+      "gini_gain": 23.6643,
+      "entropy_bits": 54.4283
+    },
+    {
+      "tag": "donate-token",
+      "included_matches": 172,
+      "split_leaves": 17,
+      "affected_ambiguous_records": 68,
+      "singleton_opportunities": 24,
+      "separated_pairs": 64,
+      "gini_gain": 23.6167,
+      "entropy_bits": 51.5099
+    },
+    {
+      "tag": "french-vanilla-equipment",
+      "included_matches": 46,
+      "split_leaves": 12,
+      "affected_ambiguous_records": 60,
+      "singleton_opportunities": 10,
+      "separated_pairs": 78,
+      "gini_gain": 23.4816,
+      "entropy_bits": 49.8802
+    },
+    {
+      "tag": "alliance",
+      "included_matches": 537,
+      "split_leaves": 19,
+      "affected_ambiguous_records": 54,
+      "singleton_opportunities": 30,
+      "separated_pairs": 37,
+      "gini_gain": 23.2667,
+      "entropy_bits": 48.1648
+    },
+    {
+      "tag": "creaturefall",
+      "included_matches": 537,
+      "split_leaves": 19,
+      "affected_ambiguous_records": 54,
+      "singleton_opportunities": 30,
+      "separated_pairs": 37,
+      "gini_gain": 23.2667,
+      "entropy_bits": 48.1648
+    },
+    {
+      "tag": "etb-other-creature",
+      "included_matches": 537,
+      "split_leaves": 19,
+      "affected_ambiguous_records": 54,
+      "singleton_opportunities": 30,
+      "separated_pairs": 37,
+      "gini_gain": 23.2667,
+      "entropy_bits": 48.1648
+    },
+    {
+      "tag": "mana-rock-with-sets-mechanic",
+      "included_matches": 105,
+      "split_leaves": 14,
+      "affected_ambiguous_records": 51,
+      "singleton_opportunities": 21,
+      "separated_pairs": 70,
+      "gini_gain": 23.2111,
+      "entropy_bits": 47.5489
+    },
+    {
+      "tag": "cast-from-exile",
+      "included_matches": 588,
+      "split_leaves": 16,
+      "affected_ambiguous_records": 74,
+      "singleton_opportunities": 22,
+      "separated_pairs": 64,
+      "gini_gain": 23.1508,
+      "entropy_bits": 51.7975
+    },
+    {
+      "tag": "gives-castable-from-exile",
+      "included_matches": 588,
+      "split_leaves": 16,
+      "affected_ambiguous_records": 74,
+      "singleton_opportunities": 22,
+      "separated_pairs": 64,
+      "gini_gain": 23.1508,
+      "entropy_bits": 51.7975
+    },
+    {
+      "tag": "toughness-boost-to-all",
+      "included_matches": 852,
+      "split_leaves": 16,
+      "affected_ambiguous_records": 69,
+      "singleton_opportunities": 20,
+      "separated_pairs": 55,
+      "gini_gain": 23.1325,
+      "entropy_bits": 50.8505
+    },
+    {
+      "tag": "adds-multiple-mana",
+      "included_matches": 462,
+      "split_leaves": 14,
+      "affected_ambiguous_records": 56,
+      "singleton_opportunities": 18,
+      "separated_pairs": 73,
+      "gini_gain": 22.8846,
+      "entropy_bits": 48.0911
+    },
+    {
+      "tag": "produces-multiple-mana",
+      "included_matches": 462,
+      "split_leaves": 14,
+      "affected_ambiguous_records": 56,
+      "singleton_opportunities": 18,
+      "separated_pairs": 73,
+      "gini_gain": 22.8846,
+      "entropy_bits": 48.0911
+    },
+    {
+      "tag": "prevent-cast",
+      "included_matches": 84,
+      "split_leaves": 16,
+      "affected_ambiguous_records": 80,
+      "singleton_opportunities": 21,
+      "separated_pairs": 64,
+      "gini_gain": 22.8364,
+      "entropy_bits": 52.1075
+    },
+    {
+      "tag": "prevents-casting",
+      "included_matches": 84,
+      "split_leaves": 16,
+      "affected_ambiguous_records": 80,
+      "singleton_opportunities": 21,
+      "separated_pairs": 64,
+      "gini_gain": 22.8364,
+      "entropy_bits": 52.1075
+    },
+    {
+      "tag": "hate-nonbasic-land",
+      "included_matches": 76,
+      "split_leaves": 15,
+      "affected_ambiguous_records": 91,
+      "singleton_opportunities": 18,
+      "separated_pairs": 76,
+      "gini_gain": 22.6537,
+      "entropy_bits": 53.3888
+    },
+    {
+      "tag": "bottomless-mana-sink",
+      "included_matches": 719,
+      "split_leaves": 18,
+      "affected_ambiguous_records": 69,
+      "singleton_opportunities": 27,
+      "separated_pairs": 51,
+      "gini_gain": 22.3795,
+      "entropy_bits": 48.6512
+    },
+    {
+      "tag": "infinite-mana-sink",
+      "included_matches": 719,
+      "split_leaves": 18,
+      "affected_ambiguous_records": 69,
+      "singleton_opportunities": 27,
+      "separated_pairs": 51,
+      "gini_gain": 22.3795,
+      "entropy_bits": 48.6512
+    },
+    {
+      "tag": "peek",
+      "included_matches": 1104,
+      "split_leaves": 17,
+      "affected_ambiguous_records": 75,
+      "singleton_opportunities": 25,
+      "separated_pairs": 58,
+      "gini_gain": 22.3212,
+      "entropy_bits": 49.7279
+    },
+    {
+      "tag": "portmanteau",
+      "included_matches": 133,
+      "split_leaves": 15,
+      "affected_ambiguous_records": 87,
+      "singleton_opportunities": 18,
+      "separated_pairs": 72,
+      "gini_gain": 22.2921,
+      "entropy_bits": 52.0289
+    },
+    {
+      "tag": "humble",
+      "included_matches": 119,
+      "split_leaves": 15,
+      "affected_ambiguous_records": 70,
+      "singleton_opportunities": 18,
+      "separated_pairs": 58,
+      "gini_gain": 22.2667,
+      "entropy_bits": 49.4044
+    },
+    {
+      "tag": "group-slug",
+      "included_matches": 756,
+      "split_leaves": 16,
+      "affected_ambiguous_records": 48,
+      "singleton_opportunities": 21,
+      "separated_pairs": 37,
+      "gini_gain": 21.9667,
+      "entropy_bits": 44.9546
+    },
+    {
+      "tag": "pinger",
+      "included_matches": 707,
+      "split_leaves": 16,
+      "affected_ambiguous_records": 46,
+      "singleton_opportunities": 20,
+      "separated_pairs": 35,
+      "gini_gain": 21.8,
+      "entropy_bits": 44.2388
+    },
+    {
+      "tag": "tim",
+      "included_matches": 707,
+      "split_leaves": 16,
+      "affected_ambiguous_records": 46,
+      "singleton_opportunities": 20,
+      "separated_pairs": 35,
+      "gini_gain": 21.8,
+      "entropy_bits": 44.2388
+    },
+    {
+      "tag": "opponent-chooses",
+      "included_matches": 143,
+      "split_leaves": 16,
+      "affected_ambiguous_records": 62,
+      "singleton_opportunities": 21,
+      "separated_pairs": 46,
+      "gini_gain": 21.7952,
+      "entropy_bits": 47.5676
+    },
+    {
+      "tag": "burn-you",
+      "included_matches": 258,
+      "split_leaves": 17,
+      "affected_ambiguous_records": 53,
+      "singleton_opportunities": 25,
+      "separated_pairs": 38,
+      "gini_gain": 21.75,
+      "entropy_bits": 45.5678
+    },
+    {
+      "tag": "commander-matters",
+      "included_matches": 47,
+      "split_leaves": 13,
+      "affected_ambiguous_records": 61,
+      "singleton_opportunities": 14,
+      "separated_pairs": 66,
+      "gini_gain": 21.4932,
+      "entropy_bits": 46.9255
+    },
+    {
+      "tag": "planeswalker-support",
+      "included_matches": 202,
+      "split_leaves": 16,
+      "affected_ambiguous_records": 59,
+      "singleton_opportunities": 21,
+      "separated_pairs": 43,
+      "gini_gain": 21.3976,
+      "entropy_bits": 46.2647
+    },
+    {
+      "tag": "synergy-planeswalker",
+      "included_matches": 202,
+      "split_leaves": 16,
+      "affected_ambiguous_records": 59,
+      "singleton_opportunities": 21,
+      "separated_pairs": 43,
+      "gini_gain": 21.3976,
+      "entropy_bits": 46.2647
+    },
+    {
+      "tag": "cost-increaser",
+      "included_matches": 69,
+      "split_leaves": 13,
+      "affected_ambiguous_records": 67,
+      "singleton_opportunities": 16,
+      "separated_pairs": 68,
+      "gini_gain": 21.1811,
+      "entropy_bits": 47.296
+    },
+    {
+      "tag": "minigame",
+      "included_matches": 78,
+      "split_leaves": 17,
+      "affected_ambiguous_records": 52,
+      "singleton_opportunities": 26,
+      "separated_pairs": 35,
+      "gini_gain": 21.0,
+      "entropy_bits": 44.2905
+    },
+    {
+      "tag": "protects-creature",
+      "included_matches": 845,
+      "split_leaves": 14,
+      "affected_ambiguous_records": 48,
+      "singleton_opportunities": 17,
+      "separated_pairs": 44,
+      "gini_gain": 20.9444,
+      "entropy_bits": 43.3422
+    },
+    {
+      "tag": "bigger-than-mv",
+      "included_matches": 993,
+      "split_leaves": 17,
+      "affected_ambiguous_records": 54,
+      "singleton_opportunities": 27,
+      "separated_pairs": 37,
+      "gini_gain": 20.85,
+      "entropy_bits": 44.3485
+    },
+    {
+      "tag": "more-expensive-than-mv",
+      "included_matches": 993,
+      "split_leaves": 17,
+      "affected_ambiguous_records": 54,
+      "singleton_opportunities": 27,
+      "separated_pairs": 37,
+      "gini_gain": 20.85,
+      "entropy_bits": 44.3485
+    },
+    {
+      "tag": "gives-hexproof",
+      "included_matches": 132,
+      "split_leaves": 15,
+      "affected_ambiguous_records": 49,
+      "singleton_opportunities": 20,
+      "separated_pairs": 38,
+      "gini_gain": 20.8333,
+      "entropy_bits": 43.419
+    },
+    {
+      "tag": "keyword-errata",
+      "included_matches": 82,
+      "split_leaves": 14,
+      "affected_ambiguous_records": 69,
+      "singleton_opportunities": 17,
+      "separated_pairs": 55,
+      "gini_gain": 20.7643,
+      "entropy_bits": 47.1285
+    },
+    {
+      "tag": "peek-library",
+      "included_matches": 878,
+      "split_leaves": 16,
+      "affected_ambiguous_records": 70,
+      "singleton_opportunities": 24,
+      "separated_pairs": 54,
+      "gini_gain": 20.7212,
+      "entropy_bits": 46.1183
+    },
+    {
+      "tag": "spy-library",
+      "included_matches": 878,
+      "split_leaves": 16,
+      "affected_ambiguous_records": 70,
+      "singleton_opportunities": 24,
+      "separated_pairs": 54,
+      "gini_gain": 20.7212,
+      "entropy_bits": 46.1183
+    },
+    {
+      "tag": "keyword-anthem",
+      "included_matches": 468,
+      "split_leaves": 15,
+      "affected_ambiguous_records": 58,
+      "singleton_opportunities": 21,
+      "separated_pairs": 47,
+      "gini_gain": 20.6087,
+      "entropy_bits": 44.5509
+    },
+    {
+      "tag": "rhystic",
+      "included_matches": 234,
+      "split_leaves": 14,
+      "affected_ambiguous_records": 78,
+      "singleton_opportunities": 17,
+      "separated_pairs": 64,
+      "gini_gain": 20.5477,
+      "entropy_bits": 47.5736
+    },
+    {
+      "tag": "gives-unblockable",
+      "included_matches": 169,
+      "split_leaves": 14,
+      "affected_ambiguous_records": 70,
+      "singleton_opportunities": 19,
+      "separated_pairs": 59,
+      "gini_gain": 20.4182,
+      "entropy_bits": 46.074
+    },
+    {
+      "tag": "dilemma",
+      "included_matches": 210,
+      "split_leaves": 16,
+      "affected_ambiguous_records": 57,
+      "singleton_opportunities": 24,
+      "separated_pairs": 41,
+      "gini_gain": 20.3452,
+      "entropy_bits": 44.0418
+    },
+    {
+      "tag": "hate-high-pt",
+      "included_matches": 177,
+      "split_leaves": 15,
+      "affected_ambiguous_records": 50,
+      "singleton_opportunities": 20,
+      "separated_pairs": 36,
+      "gini_gain": 19.85,
+      "entropy_bits": 41.9582
+    },
+    {
+      "tag": "synergy-color-each",
+      "included_matches": 40,
+      "split_leaves": 13,
+      "affected_ambiguous_records": 84,
+      "singleton_opportunities": 15,
+      "separated_pairs": 71,
+      "gini_gain": 19.8159,
+      "entropy_bits": 47.2628
+    },
+    {
+      "tag": "keyword-errata-flash",
+      "included_matches": 59,
+      "split_leaves": 13,
+      "affected_ambiguous_records": 67,
+      "singleton_opportunities": 15,
+      "separated_pairs": 54,
+      "gini_gain": 19.7643,
+      "entropy_bits": 45.1285
+    },
+    {
+      "tag": "synergy-red",
+      "included_matches": 174,
+      "split_leaves": 14,
+      "affected_ambiguous_records": 64,
+      "singleton_opportunities": 18,
+      "separated_pairs": 50,
+      "gini_gain": 19.7,
+      "entropy_bits": 44.2172
+    },
+    {
+      "tag": "flowstone",
+      "included_matches": 115,
+      "split_leaves": 12,
+      "affected_ambiguous_records": 65,
+      "singleton_opportunities": 12,
+      "separated_pairs": 57,
+      "gini_gain": 19.5747,
+      "entropy_bits": 43.769
+    },
+    {
+      "tag": "misnomer",
+      "included_matches": 59,
+      "split_leaves": 14,
+      "affected_ambiguous_records": 62,
+      "singleton_opportunities": 18,
+      "separated_pairs": 48,
+      "gini_gain": 19.5278,
+      "entropy_bits": 43.542
+    },
+    {
+      "tag": "tap-fuel-creature",
+      "included_matches": 637,
+      "split_leaves": 15,
+      "affected_ambiguous_records": 69,
+      "singleton_opportunities": 22,
+      "separated_pairs": 54,
+      "gini_gain": 19.5256,
+      "entropy_bits": 43.893
+    },
+    {
+      "tag": "cheat-mana",
+      "included_matches": 528,
+      "split_leaves": 16,
+      "affected_ambiguous_records": 53,
+      "singleton_opportunities": 26,
+      "separated_pairs": 37,
+      "gini_gain": 19.4921,
+      "entropy_bits": 41.8163
+    },
+    {
+      "tag": "cost-ignorer",
+      "included_matches": 528,
+      "split_leaves": 16,
+      "affected_ambiguous_records": 53,
+      "singleton_opportunities": 26,
+      "separated_pairs": 37,
+      "gini_gain": 19.4921,
+      "entropy_bits": 41.8163
+    },
+    {
+      "tag": "free-casting",
+      "included_matches": 528,
+      "split_leaves": 16,
+      "affected_ambiguous_records": 53,
+      "singleton_opportunities": 26,
+      "separated_pairs": 37,
+      "gini_gain": 19.4921,
+      "entropy_bits": 41.8163
+    },
+    {
+      "tag": "synergy-aura",
+      "included_matches": 186,
+      "split_leaves": 14,
+      "affected_ambiguous_records": 66,
+      "singleton_opportunities": 19,
+      "separated_pairs": 52,
+      "gini_gain": 19.2604,
+      "entropy_bits": 43.413
+    },
+    {
+      "tag": "arena-only-mechanics",
+      "included_matches": 525,
+      "split_leaves": 14,
+      "affected_ambiguous_records": 83,
+      "singleton_opportunities": 21,
+      "separated_pairs": 69,
+      "gini_gain": 18.9022,
+      "entropy_bits": 43.909
+    },
+    {
+      "tag": "digital-only-mechanics",
+      "included_matches": 525,
+      "split_leaves": 14,
+      "affected_ambiguous_records": 83,
+      "singleton_opportunities": 21,
+      "separated_pairs": 69,
+      "gini_gain": 18.9022,
+      "entropy_bits": 43.909
+    },
+    {
+      "tag": "tuck",
+      "included_matches": 205,
+      "split_leaves": 12,
+      "affected_ambiguous_records": 86,
+      "singleton_opportunities": 14,
+      "separated_pairs": 79,
+      "gini_gain": 18.865,
+      "entropy_bits": 44.1984
+    },
+    {
+      "tag": "bottle-draw",
+      "included_matches": 228,
+      "split_leaves": 12,
+      "affected_ambiguous_records": 65,
+      "singleton_opportunities": 15,
+      "separated_pairs": 59,
+      "gini_gain": 18.8175,
+      "entropy_bits": 43.0426
+    },
+    {
+      "tag": "impulse-draw",
+      "included_matches": 228,
+      "split_leaves": 12,
+      "affected_ambiguous_records": 65,
+      "singleton_opportunities": 15,
+      "separated_pairs": 59,
+      "gini_gain": 18.8175,
+      "entropy_bits": 43.0426
+    },
+    {
+      "tag": "impulsive-draw",
+      "included_matches": 228,
+      "split_leaves": 12,
+      "affected_ambiguous_records": 65,
+      "singleton_opportunities": 15,
+      "separated_pairs": 59,
+      "gini_gain": 18.8175,
+      "entropy_bits": 43.0426
+    },
+    {
+      "tag": "restricted-mana",
+      "included_matches": 203,
+      "split_leaves": 10,
+      "affected_ambiguous_records": 55,
+      "singleton_opportunities": 12,
+      "separated_pairs": 72,
+      "gini_gain": 18.6496,
+      "entropy_bits": 40.5813
+    },
+    {
+      "tag": "type-errata-summon-creature",
+      "included_matches": 100,
+      "split_leaves": 17,
+      "affected_ambiguous_records": 40,
+      "singleton_opportunities": 31,
+      "separated_pairs": 23,
+      "gini_gain": 18.4333,
+      "entropy_bits": 37.6096
+    },
+    {
+      "tag": "consult",
+      "included_matches": 201,
+      "split_leaves": 14,
+      "affected_ambiguous_records": 44,
+      "singleton_opportunities": 20,
+      "separated_pairs": 33,
+      "gini_gain": 18.3333,
+      "entropy_bits": 38.3296
+    },
+    {
+      "tag": "exile-on-resolution",
+      "included_matches": 109,
+      "split_leaves": 14,
+      "affected_ambiguous_records": 53,
+      "singleton_opportunities": 20,
+      "separated_pairs": 39,
+      "gini_gain": 18.2421,
+      "entropy_bits": 39.7744
+    },
+    {
+      "tag": "cast-trigger-other",
+      "included_matches": 121,
+      "split_leaves": 14,
+      "affected_ambiguous_records": 39,
+      "singleton_opportunities": 21,
+      "separated_pairs": 29,
+      "gini_gain": 18.1333,
+      "entropy_bits": 36.9546
+    },
+    {
+      "tag": "gives-indestructible",
+      "included_matches": 237,
+      "split_leaves": 12,
+      "affected_ambiguous_records": 42,
+      "singleton_opportunities": 14,
+      "separated_pairs": 36,
+      "gini_gain": 17.9111,
+      "entropy_bits": 36.9937
+    },
+    {
+      "tag": "tutor-land-basic",
+      "included_matches": 370,
+      "split_leaves": 9,
+      "affected_ambiguous_records": 50,
+      "singleton_opportunities": 8,
+      "separated_pairs": 56,
+      "gini_gain": 17.8658,
+      "entropy_bits": 38.486
+    },
+    {
+      "tag": "cycle-bondland",
+      "included_matches": 10,
+      "split_leaves": 10,
+      "affected_ambiguous_records": 93,
+      "singleton_opportunities": 10,
+      "separated_pairs": 83,
+      "gini_gain": 17.8141,
+      "entropy_bits": 45.6622
+    },
+    {
+      "tag": "cycle-checkland",
+      "included_matches": 10,
+      "split_leaves": 10,
+      "affected_ambiguous_records": 93,
+      "singleton_opportunities": 10,
+      "separated_pairs": 83,
+      "gini_gain": 17.8141,
+      "entropy_bits": 45.6622
+    },
+    {
+      "tag": "cycle-crowdland",
+      "included_matches": 10,
+      "split_leaves": 10,
+      "affected_ambiguous_records": 93,
+      "singleton_opportunities": 10,
+      "separated_pairs": 83,
+      "gini_gain": 17.8141,
+      "entropy_bits": 45.6622
+    },
+    {
+      "tag": "cycle-dsk-thirteenland",
+      "included_matches": 10,
+      "split_leaves": 10,
+      "affected_ambiguous_records": 93,
+      "singleton_opportunities": 10,
+      "separated_pairs": 83,
+      "gini_gain": 17.8141,
+      "entropy_bits": 45.6622
+    },
+    {
+      "tag": "cycle-fastland",
+      "included_matches": 10,
+      "split_leaves": 10,
+      "affected_ambiguous_records": 93,
+      "singleton_opportunities": 10,
+      "separated_pairs": 83,
+      "gini_gain": 17.8141,
+      "entropy_bits": 45.6622
+    },
+    {
+      "tag": "cycle-reveal-land",
+      "included_matches": 10,
+      "split_leaves": 10,
+      "affected_ambiguous_records": 93,
+      "singleton_opportunities": 10,
+      "separated_pairs": 83,
+      "gini_gain": 17.8141,
+      "entropy_bits": 45.6622
+    },
+    {
+      "tag": "cycle-slowland",
+      "included_matches": 10,
+      "split_leaves": 10,
+      "affected_ambiguous_records": 93,
+      "singleton_opportunities": 10,
+      "separated_pairs": 83,
+      "gini_gain": 17.8141,
+      "entropy_bits": 45.6622
+    },
+    {
+      "tag": "cycle-verge",
+      "included_matches": 10,
+      "split_leaves": 10,
+      "affected_ambiguous_records": 93,
+      "singleton_opportunities": 10,
+      "separated_pairs": 83,
+      "gini_gain": 17.8141,
+      "entropy_bits": 45.6622
+    },
+    {
+      "tag": "slowland",
+      "included_matches": 10,
+      "split_leaves": 10,
+      "affected_ambiguous_records": 93,
+      "singleton_opportunities": 10,
+      "separated_pairs": 83,
+      "gini_gain": 17.8141,
+      "entropy_bits": 45.6622
+    },
+    {
+      "tag": "aesthetic-counter",
+      "included_matches": 298,
+      "split_leaves": 15,
+      "affected_ambiguous_records": 47,
+      "singleton_opportunities": 26,
+      "separated_pairs": 32,
+      "gini_gain": 17.4921,
+      "entropy_bits": 37.3261
+    },
+    {
+      "tag": "hate-color-choose",
+      "included_matches": 94,
+      "split_leaves": 13,
+      "affected_ambiguous_records": 52,
+      "singleton_opportunities": 18,
+      "separated_pairs": 39,
+      "gini_gain": 17.4889,
+      "entropy_bits": 38.4036
+    },
+    {
+      "tag": "tome",
+      "included_matches": 144,
+      "split_leaves": 11,
+      "affected_ambiguous_records": 55,
+      "singleton_opportunities": 11,
+      "separated_pairs": 49,
+      "gini_gain": 17.4811,
+      "entropy_bits": 38.577
+    },
+    {
+      "tag": "gives-mm-counters",
+      "included_matches": 185,
+      "split_leaves": 12,
+      "affected_ambiguous_records": 63,
+      "singleton_opportunities": 15,
+      "separated_pairs": 51,
+      "gini_gain": 17.381,
+      "entropy_bits": 39.853
+    }
+  ]
+}
